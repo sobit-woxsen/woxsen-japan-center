@@ -29,6 +29,10 @@ const notoSansJP = Noto_Sans_JP({
 export const metadata: Metadata = {
   title: "Woxsen Japan Centre | ウォクセン日本センター",
   description: "Bridging Japan and Global Business Leadership",
+  icons: {
+    icon: "/images/logos/WHITE LOGO.png",
+    apple: "/images/logos/WHITE LOGO.png",
+  },
 }
 
 export const viewport: Viewport = {
