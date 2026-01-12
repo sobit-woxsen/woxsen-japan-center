@@ -48,8 +48,9 @@ export default function Footer() {
           <div className="mb-16 pb-12 border-b border-white/10">
             <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-8">
               <div>
-                <h3 className="text-2xl md:text-3xl font-serif font-normal mb-2">Stay Connected</h3>
-                <p className="text-white/60">Get updates on events, programs, and cultural activities.</p>
+                <h3 className="text-2xl md:text-3xl font-serif font-normal mb-2">Stay Informed</h3>
+                <p className="text-white/60"> Receive updates on events,
+                  programs, and opportunities related to Japan.</p>
               </div>
               <div className="flex gap-3">
                 <input
@@ -81,8 +82,9 @@ export default function Footer() {
               </div>
               <h3 className="text-xl font-semibold mb-3 tracking-tight">Woxsen Japan Centre</h3>
               <p className="text-white/60 text-sm leading-relaxed mb-6">
-                Bridging Japan and global business leadership through education, culture, and collaboration.
-              </p>
+                The Woxsen Japan Centre
+                facilitates academic collaboration, language education, and
+                structured engagement with Japan.              </p>
               {/* Social Links */}
               <div className="flex gap-3">
                 {socialLinks.map((social, idx) => (
@@ -141,19 +143,19 @@ export default function Footer() {
             {/* Partners */}
             <div>
               <h4 className="text-accent text-sm font-bold uppercase tracking-wider mb-4">Our Partners</h4>
-              <div className="flex flex-wrap gap-4">
+              <div className="flex flex-wrap gap-3">
                 {partners.map((partner, idx) => (
                   <div
                     key={idx}
-                    className="bg-white/10 rounded-lg p-3 grayscale hover:grayscale-0 transition-all"
+                    className="w-32 h-20 bg-white rounded-lg p-2 flex items-center justify-center hover:scale-105 transition-all duration-300 shadow-sm hover:shadow-md"
                     title={partner.name}
                   >
                     <Image
                       src={partner.logo}
                       alt={partner.name}
-                      width={60}
-                      height={40}
-                      className="h-8 w-auto object-contain"
+                      width={120}
+                      height={80}
+                      className="w-full h-full object-contain"
                     />
                   </div>
                 ))}

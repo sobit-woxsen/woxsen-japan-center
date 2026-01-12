@@ -1,16 +1,23 @@
 "use client"
 
 import { useState, useEffect, useRef } from "react"
-import Link from "next/link"
 import Image from "next/image"
 import Navigation from "@/components/navigation"
-import { Button } from "@/components/ui/button"
 import SakuraEffect from "@/components/ui/sakura-effect"
+
+const heroImages = [
+  "/images/hero/wjc.jpg",
+  "/images/hero/WJC 2.jpg",
+  "/images/hero/WJC 6.jpg",
+  "/images/hero/WJC 8.jpeg",
+  "/images/hero/WJC 9.jpg",
+]
 
 export default function Hero() {
   const [logoVisible, setLogoVisible] = useState(false)
   const [titleVisible, setTitleVisible] = useState(false)
   const [showContent, setShowContent] = useState(false)
+  const [currentImageIndex, setCurrentImageIndex] = useState(0)
   const heroRef = useRef<HTMLElement>(null)
   const bgRef = useRef<HTMLDivElement>(null)
 
@@ -19,6 +26,11 @@ export default function Hero() {
     const logoTimer = setTimeout(() => setLogoVisible(true), 200)
     const titleTimer = setTimeout(() => setTitleVisible(true), 700)
     const contentTimer = setTimeout(() => setShowContent(true), 1200)
+
+    // Background image slideshow
+    const imageInterval = setInterval(() => {
+      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % heroImages.length)
+    }, 5000) // Change image every 5 seconds
 
     // Subtle parallax
     let ticking = false
@@ -41,24 +53,33 @@ export default function Hero() {
       clearTimeout(logoTimer)
       clearTimeout(titleTimer)
       clearTimeout(contentTimer)
+      clearInterval(imageInterval)
       window.removeEventListener('scroll', handleScroll)
     }
   }, [])
 
   return (
     <section ref={heroRef} className="relative w-full h-screen overflow-hidden">
-      {/* Background Image with Parallax */}
+      {/* Background Image Slideshow with Parallax */}
       <div
         ref={bgRef}
         className="absolute inset-0 z-0 will-change-transform"
       >
-        <Image
-          src="/images/background/hero-bg-new.avif"
-          alt="Hero Background"
-          fill
-          className="object-cover scale-110"
-          priority
-        />
+        {heroImages.map((image, index) => (
+          <div
+            key={image}
+            className={`absolute inset-0 transition-opacity duration-[2000ms] ease-in-out ${index === currentImageIndex ? 'opacity-100' : 'opacity-0'
+              }`}
+          >
+            <Image
+              src={image}
+              alt={`Hero Background ${index + 1}`}
+              fill
+              className="object-cover scale-110"
+              priority={index === 0}
+            />
+          </div>
+        ))}
       </div>
 
       {/* Reddish Gradient Overlay */}
@@ -82,16 +103,16 @@ export default function Hero() {
       <div className="relative flex flex-col items-center justify-center z-10 text-center px-6 h-screen">
         {/* Logo with Glow */}
         <div
-          className={`mb-8 relative transition-all duration-1000 ease-out ${logoVisible ? 'opacity-100 scale-100 translate-y-0' : 'opacity-0 scale-95 translate-y-4'}`}
+          className={`mb-1 relative transition-all duration-1000 ease-out ${logoVisible ? 'opacity-100 scale-100 translate-y-0' : 'opacity-0 scale-95 translate-y-4'}`}
         >
           <div className="absolute inset-0 bg-accent/20 blur-3xl rounded-full scale-150" />
           <Image
             src="/wjc-logo.png"
             alt="Woxsen Japan Centre Logo"
-            width={200}
-            height={200}
+            width={300}
+            height={300}
             priority
-            className="relative w-40 md:w-70 h-auto drop-shadow-2xl"
+            className="relative w-64 md:w-80 lg:w-96 h-auto drop-shadow-2xl"
           />
         </div>
 
@@ -106,38 +127,27 @@ export default function Hero() {
         <div className={`w-20 h-1 bg-accent rounded-full mb-6 transition-all duration-500 ${titleVisible ? 'opacity-100 w-20' : 'opacity-0 w-0'}`} />
 
         {/* Subtitle - Larger */}
-        <p className={`text-white/80 text-lg md:text-xl tracking-wide max-w-lg mb-12 font-light transition-all duration-700 ${showContent ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
-          Bridging Japan and Global Business Leadership through Education and Culture
-        </p>
+        <p className={`text-white/80 text-lg md:text-xl tracking-wide max-w-lg font-light transition-all duration-700 ${showContent ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
+          Essence of Japan, Within Reach         </p>
 
-        {/* CTA Buttons */}
-        <div className={`flex flex-col sm:flex-row gap-4 items-center justify-center transition-all duration-700 delay-100 ${showContent ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
-          <Button
-            asChild
-            size="lg"
-            className="bg-accent hover:bg-accent/90 text-foreground font-semibold tracking-wide px-10 py-6 text-base rounded-sm transition-all hover:scale-105 shadow-lg shadow-accent/30"
-          >
-            <Link href="/join">Join Our Community</Link>
-          </Button>
-          <Button
-            asChild
-            size="lg"
-            variant="outline"
-            className="border-1 border-accent/10 text-accent hover:bg-accent/10 hover:border-accent font-semibold tracking-wide px-10 py-6 text-base rounded-sm backdrop-blur-sm transition-all hover:scale-105"
-          >
-            <Link href="/about">Learn More</Link>
-          </Button>
-        </div>
-
-        {/* Scroll Indicator */}
-        {/* <div className={`absolute bottom-8 left-1/2 -translate-x-1/2 transition-all duration-700 delay-300 ${showContent ? 'opacity-100' : 'opacity-0'}`}>
-          <div className="flex flex-col items-center gap-2 text-white/40">
-            <span className="text-xs tracking-widest uppercase">Scroll</span>
-            <div className="w-5 h-8 border border-white/30 rounded-full flex justify-center pt-2">
-              <div className="w-1 h-2 bg-white/50 rounded-full animate-bounce" />
-            </div>
+        {/* Scroll Indicator - Animated Down Arrow */}
+        <div className={`absolute bottom-12 left-1/2 -translate-x-1/2 transition-all duration-700 delay-300 ${showContent ? 'opacity-100' : 'opacity-0'}`}>
+          <div className="flex flex-col items-center gap-2">
+            <svg
+              className="w-8 h-8 text-white/70 animate-bounce"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M19 9l-7 7-7-7"
+              />
+            </svg>
           </div>
-        </div> */}
+        </div>
       </div>
     </section>
   )

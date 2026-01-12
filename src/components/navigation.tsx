@@ -1,5 +1,6 @@
 "use client"
 
+
 import { useState, useEffect, useRef } from "react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
@@ -37,12 +38,20 @@ export default function Navigation() {
 
   // Dynamic link styles - always white now
   const getLinkClassName = (href: string) => {
+    // Special button styling for JOIN US
+    if (href === "/join") {
+      return "bg-accent hover:bg-accent/90 text-foreground font-semibold tracking-wide px-6 py-2.5 text-sm rounded-sm transition-all hover:scale-105  shadow-accent/30"
+    }
     const isActive = pathname === href || (href !== "/" && pathname.startsWith(href))
     const activeStyle = isActive ? "border-b-2 border-current pb-0.5" : ""
     return `text-white hover:text-accent text-sm tracking-tight transition-colors font-semibold ${activeStyle}`
   }
 
   const getMobileLinkClassName = (href: string) => {
+    // Special button styling for JOIN US in mobile
+    if (href === "/join") {
+      return "bg-accent hover:bg-accent/90 text-foreground font-semibold tracking-wide px-8 py-3 text-2xl rounded-sm transition-all hover:scale-105 shadow-lg shadow-accent/30"
+    }
     const isActive = pathname === href || (href !== "/" && pathname.startsWith(href))
     const activeStyle = isActive ? "text-accent" : "text-white"
     return `${activeStyle} text-2xl font-serif tracking-wide hover:text-accent transition-colors`
@@ -62,7 +71,7 @@ export default function Navigation() {
   ]
 
   return (
-    <nav ref={navRef} className="absolute top-6 right-6 z-20 md:top-8 md:right-12">
+    <nav ref={navRef} className="absolute top-6 left-1/2 -translate-x-1/2 z-20 md:top-8">
       {/* Desktop Navigation */}
       <ul className="hidden md:flex gap-8 items-center">
         {navLinks.map((link) => (

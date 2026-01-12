@@ -5,10 +5,10 @@ import Link from "next/link"
 import { ArrowUpRight } from "lucide-react"
 
 const benefits = [
-  { icon: "🌸", title: "Cultural Experiences", desc: "Authentic Japanese festivals and workshops" },
-  { icon: "📚", title: "Language Learning", desc: "JLPT courses from N5 to N2" },
-  { icon: "🤝", title: "Networking", desc: "Connect with global professionals" },
-  { icon: "✈️", title: "Study Abroad", desc: "Exchange opportunities in Japan" },
+  { title: "Cultural Experiences", desc: "Authentic Japanese festivals and workshops" },
+  { title: "Language Learning", desc: "JLPT courses from N5 to N2" },
+  { title: "Networking", desc: "Connect with global professionals" },
+  { title: "Study Abroad", desc: "Exchange opportunities in Japan" },
 ]
 
 export default function FeaturedJoin() {
@@ -57,7 +57,6 @@ export default function FeaturedJoin() {
                 }`}
               style={{ transitionDelay: `${idx * 100}ms` }}
             >
-              <div className="text-3xl mb-3 group-hover:scale-110 transition-transform">{benefit.icon}</div>
               <h3 className="text-foreground font-semibold text-xl mb-1">{benefit.title}</h3>
               <p className="text-foreground/60 text-sm">{benefit.desc}</p>
             </div>

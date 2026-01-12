@@ -83,12 +83,13 @@ export default function JoinPage() {
             Welcome
           </span>
           <h2 className="text-foreground font-serif text-3xl md:text-5xl font-normal tracking-wide mb-6">
-            Join a Vibrant Community
+            Be Part of Our Community
           </h2>
           <p className="text-foreground/70 text-lg leading-relaxed">
-            The Woxsen Japan Centre welcomes students, faculty, and enthusiasts who share a passion for
-            Japanese language, culture, and Indo-Japanese relations. Become part of our growing community
-            and unlock a world of opportunities.
+            At the Woxsen Japan Centre, students and faculty come together to
+            explore Japanese language, culture, and Indo-Japanese connections.
+            Join a vibrant campus community that encourages learning, exchange,
+            and international perspective.
           </p>
         </div>
       </section>

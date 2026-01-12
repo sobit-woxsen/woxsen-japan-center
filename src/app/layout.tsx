@@ -50,7 +50,6 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${aspekta.variable} ${geistMono.variable} ${hinaMincho.variable} ${notoSansJP.variable}`}>
       <body className="font-sans bg-background text-foreground overflow-x-hidden body-texture">
-        <Logo />
         {children}
       </body>
     </html>

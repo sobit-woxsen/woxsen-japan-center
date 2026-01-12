@@ -11,22 +11,21 @@ export default function EventsPage() {
       <PageHeader title="EVENTS & ACTIVITIES" subtitle="Cultural Exchange & Learning Opportunities" watermark="行事" />
 
       {/* Upcoming Events Section */}
-      <section className="w-full py-24 px-6 md:px-12 lg:px-20 bg-background texture-overlay">
+      {/* <section className="w-full py-24 px-6 md:px-12 lg:px-20 bg-background texture-overlay">
         <div className="max-w-4xl mx-auto text-center">
-          {/* Upcoming Events Header */}
           <div className="mb-12">
             <span className="text-accent font-sans text-sm tracking-widest font-bold uppercase mb-4 block">
               UPCOMING EVENTS
             </span>
           </div>
 
-          {/* Description */}
+
           <p className="text-foreground/70 text-lg md:text-xl leading-relaxed mb-16">
             The Woxsen Japan Centre continues to expand its calendar with engaging academic and cultural events.
             Stay tuned for upcoming collaborations, exchange programs, and celebrations that bring the spirit of Japan to our campus.
           </p>
 
-          {/* Coming Soon */}
+
           <div className="py-16 px-8 bg-accent/5 rounded-2xl border border-accent/10">
             <div className="text-6xl mb-6">🎌</div>
             <h3 className="text-foreground font-serif text-3xl md:text-4xl font-normal tracking-wide mb-4">
@@ -37,7 +36,7 @@ export default function EventsPage() {
             </p>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Past Events Section */}
       <section className="w-full py-24 px-6 md:px-12 lg:px-20 bg-accent/5">

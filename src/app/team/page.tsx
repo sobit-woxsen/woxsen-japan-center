@@ -230,11 +230,12 @@ export default function TeamPage() {
             <span className="text-6xl">🎌</span>
           </div>
           <h2 className="text-white font-serif text-3xl md:text-5xl font-normal tracking-wide mb-6">
-            Want to Join Our Team?
-          </h2>
+            Interested in Joining the Team?          </h2>
           <p className="text-white/70 text-lg leading-relaxed mb-10 max-w-2xl mx-auto">
-            Be part of a passionate community dedicated to fostering Japan-India cultural exchange.
-            Whether you&apos;re a student leader or faculty member, there&apos;s a place for you at Woxsen Japan Centre.
+            The Woxsen Japan Centre welcomes students and faculty who are
+            interested in contributing to its academic, cultural, and engagement
+            initiatives. Those looking to be part of Japan-focused programs, events,
+            and collaborations are encouraged to get involved.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Link

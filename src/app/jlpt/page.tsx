@@ -87,9 +87,14 @@ export default function JLPTPage() {
               Learn Japanese with Excellence
             </h2>
             <p className="text-foreground/70 text-lg leading-relaxed max-w-3xl mx-auto">
-              Our comprehensive Japanese language program prepares students for the Japanese Language Proficiency Test
-              (JLPT) at all levels. From beginner to advanced, we provide expert instruction rooted in Japanese
-              pedagogical methods.
+              Our Japanese language programme is designed to prepare
+              students for the Japanese Language Proficiency Test (JLPT) through
+              structured, classroom-led instruction grounded in authentic Japanese
+              pedagogical practices. The programme is a paid offering and is
+              currently available at the N5 (Beginner) level. Instruction is supported
+              by native Japanese speakers, providing learners with accurate pronunciation, cultural context, and real-world language exposure. As
+              the programme evolves, higher levels beginning with N4 will be
+              introduced in a phased manner.
             </p>
           </div>
 

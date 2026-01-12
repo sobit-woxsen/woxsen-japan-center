@@ -84,9 +84,10 @@ export default function AboutPage() {
                 Bridging Cultures Through Education
               </h2>
               <p className="text-foreground/70 text-base leading-relaxed">
-                Inaugurated on 2nd April 2025 by Mr. Muneo Takahashi, Consul-General of Japan in Chennai,
-                we are dedicated to fostering intercultural dialogue and strengthening the India–Japan relationship
-                through academic collaboration, cultural exchange, and professional engagement.
+                To strengthen India–Japan relations at Woxsen University by
+                promoting intercultural understanding through Japanese language
+                education, cultural engagement, academic collaboration, and
+                experiential learning opportunities for students and faculty.
               </p>
             </div>
 
@@ -97,9 +98,9 @@ export default function AboutPage() {
                 A Future of Shared Understanding
               </h2>
               <p className="text-foreground/70 text-base leading-relaxed">
-                We work to strengthen India and Japan relations through cultural exchange, academic involvement,
-                and hands-on learning. Our goal is to promote true understanding between cultures by linking
-                students and faculty to Japan&apos;s language, values, and modern practices.
+                To establish the Woxsen Japan Centre as a leading platform for Indo
+                Japanese academic and cultural collaboration, fostering global
+                awareness, cultural literacy, and sustained engagement with Japan.
               </p>
             </div>
           </div>
@@ -111,8 +112,7 @@ export default function AboutPage() {
         <div className="max-w-4xl mx-auto text-center">
           <div className="text-accent/30 text-7xl font-serif mb-4">"</div>
           <blockquote className="text-white text-xl md:text-2xl font-serif leading-relaxed mb-8 -mt-8">
-            Our centre serves as a bridge connecting the ancient wisdom of Japan with the dynamic spirit of India,
-            creating opportunities for meaningful exchange and mutual growth.
+            Together we are, Together we will
           </blockquote>
           <div className="flex items-center justify-center gap-4">
             <Image
@@ -141,12 +141,11 @@ export default function AboutPage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
-              { icon: "🤝", title: "Cultural Bridge", description: "Connecting Indian and Japanese communities through meaningful exchanges and shared experiences." },
-              { icon: "📚", title: "Academic Excellence", description: "Providing world-class Japanese language education and professional development opportunities." },
-              { icon: "🌸", title: "Authentic Experience", description: "Offering genuine insights into Japanese culture, traditions, and contemporary society." },
+              { title: "Cultural Bridge", description: "Connecting Indian and Japanese communities through meaningful exchanges and shared experiences." },
+              { title: "Academic Excellence", description: "Providing world-class Japanese language education and professional development opportunities." },
+              { title: "Authentic Experience", description: "Offering genuine insights into Japanese culture, traditions, and contemporary society." },
             ].map((value, idx) => (
               <div key={idx} className="group bg-accent/5 rounded-xl p-8 text-center hover:bg-accent/10 transition-all border border-transparent hover:border-accent/20 hover:shadow-lg">
-                <div className="text-5xl mb-4 group-hover:scale-110 transition-transform">{value.icon}</div>
                 <h3 className="text-foreground font-serif text-xl font-normal mb-3">{value.title}</h3>
                 <p className="text-foreground/70 text-sm leading-relaxed">{value.description}</p>
               </div>
@@ -209,28 +208,24 @@ export default function AboutPage() {
             </p>
           </div>
 
-          {/* Partner Logos Bar */}
-          <div className="flex flex-wrap justify-center items-center gap-12 mb-16 py-8 border-y border-accent/10">
-            {partnerships.map((partner, idx) => (
-              <div key={idx} className="grayscale hover:grayscale-0 opacity-60 hover:opacity-100 transition-all duration-300">
-                <Image
-                  src={partner.logo || "/placeholder.svg"}
-                  alt={partner.title}
-                  width={120}
-                  height={60}
-                  className="h-12 w-auto object-contain"
-                />
-              </div>
-            ))}
-          </div>
-
-          {/* Partnership Cards */}
+          {/* Partnership Cards with Logos */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
             {partnerships.map((partner, idx) => (
               <div
                 key={idx}
                 className="group bg-accent/5 rounded-xl p-8 hover:bg-accent/10 transition-all duration-300 border border-transparent hover:border-accent/20 hover:shadow-lg"
               >
+                {/* Logo */}
+                <div className="w-full h-24 bg-white rounded-lg p-4 flex items-center justify-center mb-6 shadow-sm group-hover:shadow-md transition-all">
+                  <Image
+                    src={partner.logo || "/placeholder.svg"}
+                    alt={partner.title}
+                    width={200}
+                    height={100}
+                    className="w-full h-full object-contain"
+                  />
+                </div>
+
                 <h3 className="text-foreground font-serif text-xl font-normal mb-4 group-hover:text-accent transition-colors">
                   {partner.title}
                 </h3>
