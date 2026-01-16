@@ -1,5 +1,6 @@
 "use client"
 
+import { MessageCircle } from "lucide-react"
 import { useState, useEffect, useRef } from "react"
 
 const faqs = [
@@ -132,11 +133,13 @@ export default function FAQ() {
         {/* Contact CTA */}
         <div className={`mt-16 text-center transition-all duration-700 delay-500 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
           <div className="inline-block bg-foreground rounded-xl p-8 md:p-10">
-            <div className="text-3xl mb-4">💬</div>
+            <div className="text-3xl mb-4 w-full">
+              <MessageCircle className="h-8 text-red-500 align-middle w-full" />
+            </div>
             <h3 className="text-white font-serif text-xl md:text-2xl font-normal mb-3">
               Still Have Questions?
             </h3>
-            <p className="text-white/60 text-sm mb-6 max-w-sm">
+            <p className="text-white/60 text-medium mb-6 max-w-sm">
               We&apos;re here to help. Reach out to our team for personalized assistance.
             </p>
             <a

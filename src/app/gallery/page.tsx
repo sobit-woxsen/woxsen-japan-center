@@ -25,9 +25,8 @@ const ThumbnailImage = ({ image, isSelected, onClick }: any) => {
         src={image.src}
         alt={image.alt}
         fill
-        className={`object-cover transition-all duration-300 ${
-          isLoaded ? 'opacity-100 blur-0' : 'opacity-0 blur-sm'
-        }`}
+        className={`object-cover transition-all duration-300 ${isLoaded ? 'opacity-100 blur-0' : 'opacity-0 blur-sm'
+          }`}
         onLoad={() => setIsLoaded(true)}
         sizes="56px"
       />
@@ -163,9 +162,8 @@ export default function GalleryPage() {
             alt={image.alt}
             fill
             sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
-            className={`object-cover transition-all duration-700 group-hover:scale-110 ${
-              isLoaded ? 'opacity-100 blur-0' : 'opacity-0 blur-lg scale-110'
-            }`}
+            className={`object-cover transition-all duration-700 group-hover:scale-110 ${isLoaded ? 'opacity-100 blur-0' : 'opacity-0 blur-lg scale-110'
+              }`}
             onLoad={() => setIsLoaded(true)}
             loading="lazy"
           />
@@ -259,9 +257,8 @@ export default function GalleryPage() {
                 src={galleryImages[selectedIndex].src}
                 alt={galleryImages[selectedIndex].alt}
                 fill
-                className={`object-contain transition-all duration-500 ${
-                  lightboxImageLoaded ? 'opacity-100 blur-0' : 'opacity-0 blur-md scale-95'
-                }`}
+                className={`object-contain transition-all duration-500 ${lightboxImageLoaded ? 'opacity-100 blur-0' : 'opacity-0 blur-md scale-95'
+                  }`}
                 onLoad={() => setLightboxImageLoaded(true)}
                 priority
               />

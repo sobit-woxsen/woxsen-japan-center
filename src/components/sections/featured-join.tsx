@@ -5,10 +5,10 @@ import Link from "next/link"
 import { ArrowUpRight } from "lucide-react"
 
 const benefits = [
-  { title: "Cultural Experiences", desc: "Authentic Japanese festivals and workshops" },
-  { title: "Language Learning", desc: "JLPT courses from N5 to N2" },
-  { title: "Networking", desc: "Connect with global professionals" },
-  { title: "Study Abroad", desc: "Exchange opportunities in Japan" },
+  { title: "Cultural Experiences", desc: "Japanese cultural events, festivals, film screenings, and hands-on workshops conducted throughout the year" },
+  { title: "Language Learning", desc: "JLPT-focused Japanese language training, starting with N5 and expanding to higher levels as programs progress." },
+  { title: "Networking", desc: "Interactions with Japanese institutions, industry professionals, and academic partners through talks and collaborative programs" },
+  { title: "Study Abroad", desc: " Information and support for exchange programs, short-term visits, and academic collaborations with partner institutions in Japan" },
 ]
 
 export default function FeaturedJoin() {
@@ -49,7 +49,7 @@ export default function FeaturedJoin() {
         </div>
 
         {/* Benefits Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mb-16">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mb-8">
           {benefits.map((benefit, idx) => (
             <div
               key={idx}
@@ -57,11 +57,16 @@ export default function FeaturedJoin() {
                 }`}
               style={{ transitionDelay: `${idx * 100}ms` }}
             >
-              <h3 className="text-foreground font-semibold text-xl mb-1">{benefit.title}</h3>
-              <p className="text-foreground/60 text-sm">{benefit.desc}</p>
+              <h3 className="text-foreground font-semibold text-2xl mb-3">{benefit.title}</h3>
+              <p className="text-foreground/60 text-md">{benefit.desc}</p>
             </div>
           ))}
         </div>
+
+        {/* Note */}
+        <p className={`text-center text-foreground/60 text-lg mb-16 transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
+          Activities and opportunities are open to Woxsen University students and are announced throughout the academic year.
+        </p>
 
         {/* Two Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -88,7 +93,7 @@ export default function FeaturedJoin() {
               <h3 className="text-foreground font-serif text-2xl font-normal mb-3">
                 Join Our Community
               </h3>
-              <p className="text-foreground/70 text-sm mb-6 leading-relaxed">
+              <p className="text-foreground/70 text-md mb-6 leading-relaxed">
                 Access exclusive cultural events, language workshops, networking sessions, and more.
               </p>
               <a
@@ -127,7 +132,7 @@ export default function FeaturedJoin() {
               <h3 className="text-white font-serif text-2xl font-normal mb-3">
                 Enroll in JLPT Course
               </h3>
-              <p className="text-white/60 text-sm mb-6 leading-relaxed">
+              <p className="text-white/60 text-md mb-6 leading-relaxed">
                 Prepare for JLPT certification with native instructors and comprehensive study materials.
               </p>
               <a

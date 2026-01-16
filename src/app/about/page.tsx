@@ -146,8 +146,8 @@ export default function AboutPage() {
               { title: "Authentic Experience", description: "Offering genuine insights into Japanese culture, traditions, and contemporary society." },
             ].map((value, idx) => (
               <div key={idx} className="group bg-accent/5 rounded-xl p-8 text-center hover:bg-accent/10 transition-all border border-transparent hover:border-accent/20 hover:shadow-lg">
-                <h3 className="text-foreground font-serif text-xl font-normal mb-3">{value.title}</h3>
-                <p className="text-foreground/70 text-sm leading-relaxed">{value.description}</p>
+                <h3 className="text-foreground font-serif text-2xl font-normal mb-3">{value.title}</h3>
+                <p className="text-foreground/70 text-md leading-relaxed">{value.description}</p>
               </div>
             ))}
           </div>
@@ -226,7 +226,7 @@ export default function AboutPage() {
                   />
                 </div>
 
-                <h3 className="text-foreground font-serif text-xl font-normal mb-4 group-hover:text-accent transition-colors">
+                <h3 className="text-foreground font-serif text-2xl font-medium mb-4 group-hover:text-accent transition-colors">
                   {partner.title}
                 </h3>
                 <p className="text-foreground/70 text-sm leading-relaxed mb-5">{partner.description}</p>
@@ -253,7 +253,7 @@ export default function AboutPage() {
           </div>
 
           {/* Become a Partner CTA */}
-          <div className="bg-foreground rounded-xl p-8 md:p-12 text-center">
+          {/* <div className="bg-foreground rounded-xl p-8 md:p-12 text-center">
             <h3 className="text-white font-serif text-2xl md:text-3xl font-normal mb-4">
               Interested in Partnering With Us?
             </h3>
@@ -266,12 +266,12 @@ export default function AboutPage() {
             >
               Contact Us for Partnerships
             </a>
-          </div>
+          </div> */}
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="w-full py-24 px-6 md:px-12 lg:px-20 bg-accent/10">
+      {/* <section className="w-full py-24 px-6 md:px-12 lg:px-20 bg-accent/10">
         <div className="max-w-4xl mx-auto text-center">
           <span className="text-accent font-sans text-sm tracking-widest font-bold uppercase mb-4 block">Get Involved</span>
           <h2 className="text-foreground font-serif text-3xl md:text-5xl font-normal tracking-wide mb-6">
@@ -295,7 +295,7 @@ export default function AboutPage() {
             </Link>
           </div>
         </div>
-      </section>
+      </section> */}
 
       <Footer />
     </main >

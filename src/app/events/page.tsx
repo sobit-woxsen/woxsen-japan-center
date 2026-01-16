@@ -38,6 +38,37 @@ export default function EventsPage() {
         </div>
       </section> */}
 
+      {/* Key Initiatives Section */}
+      <section className="w-full py-24 px-6 md:px-12 lg:px-20 bg-background texture-overlay">
+        <p className="text-foreground/70 text-lg max-w-3xl mx-auto mb-16">
+          The Woxsen Japan Centre enriches campus life through a range of academic, cultural, and collaborative initiatives that deepen understanding between India and Japan.
+        </p>
+        <div className="max-w-7xl mx-auto ">
+          <div className="text-center mb-16">
+            <span className="text-accent font-sans text-sm tracking-widest font-bold uppercase mb-4 block">
+              KEY INITIATIVES
+            </span>
+            <h2 className="text-foreground font-serif text-4xl md:text-5xl font-normal tracking-wide mb-6">
+              Our Activities
+            </h2>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
+            {[
+              { title: "Language Learning", description: "Japanese language instruction and JLPT preparation" },
+              { title: "Cultural Workshops", description: "Origami, calligraphy, tea ceremony, ikebana, and more" },
+              { title: "Festival Celebrations", description: "Celebration of iconic festivals like Tanabata and Hanami" },
+              { title: "Knowledge Exchange", description: "Guest lectures, panel discussions, and pop-culture forums" },
+              { title: "Global Partnerships", description: "Student exchanges and collaborative projects with Japanese partners" },
+            ].map((item, idx) => (
+              <div key={idx} className="group bg-accent/5 rounded-xl p-6 text-center hover:bg-accent/10 transition-all border border-transparent hover:border-accent/20 hover:shadow-lg">
+                <h3 className="text-foreground font-serif text-xl font-normal mb-3">{item.title}</h3>
+                <p className="text-foreground/70 text-sm leading-relaxed">{item.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Past Events Section */}
       <section className="w-full py-24 px-6 md:px-12 lg:px-20 bg-accent/5">
         <div className="max-w-7xl mx-auto">
@@ -84,7 +115,7 @@ export default function EventsPage() {
 
                 {/* Content */}
                 <div className="p-6">
-                  <p className="text-foreground/50 text-xs tracking-tight mb-2">
+                  <p className="text-foreground/50 text-sm tracking-tight mb-2">
                     {new Date(event.date).toLocaleDateString("en-US", {
                       month: "long",
                       day: "numeric",
@@ -93,10 +124,10 @@ export default function EventsPage() {
                   </p>
                   <div className="flex items-start justify-between gap-4">
                     <div>
-                      <h3 className="text-foreground font-serif text-xl font-normal tracking-wide mb-2 group-hover:text-accent transition-colors">
+                      <h3 className="text-foreground font-serif text-3xl font-normal tracking-wide mb-2 group-hover:text-accent transition-colors">
                         {event.title}
                       </h3>
-                      <p className="text-foreground/60 text-sm leading-relaxed line-clamp-2">
+                      <p className="text-foreground/60 text-medium leading-relaxed line-clamp-2">
                         {event.description}
                       </p>
                     </div>

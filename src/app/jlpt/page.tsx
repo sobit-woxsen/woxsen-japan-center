@@ -98,29 +98,7 @@ export default function JLPTPage() {
             </p>
           </div>
 
-          {/* Why Learn Japanese */}
-          <div className="mb-24">
-            <div className="text-center mb-12">
-              <span className="text-accent font-sans text-sm tracking-widest font-bold uppercase mb-4 block">
-                Benefits
-              </span>
-              <h3 className="text-foreground font-serif text-3xl md:text-4xl font-normal tracking-wide">
-                Why Learn Japanese?
-              </h3>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {benefits.map((benefit, idx) => (
-                <div
-                  key={idx}
-                  className="bg-accent/5 rounded-xl p-6 text-center hover:bg-accent/10 transition-colors"
-                >
-                  <div className="text-4xl mb-4">{benefit.icon}</div>
-                  <h4 className="text-foreground font-semibold text-lg mb-2">{benefit.title}</h4>
-                  <p className="text-foreground/70 text-sm leading-relaxed">{benefit.description}</p>
-                </div>
-              ))}
-            </div>
-          </div>
+
 
           {/* JLPT Levels Grid */}
           <div className="mb-24">
@@ -128,9 +106,15 @@ export default function JLPTPage() {
               <span className="text-accent font-sans text-sm tracking-widest font-bold uppercase mb-4 block">
                 Course Levels
               </span>
-              <h3 className="text-foreground font-serif text-3xl md:text-4xl font-normal tracking-wide">
+              <h3 className="text-foreground font-serif text-3xl md:text-4xl font-normal tracking-wide mb-4">
                 JLPT Preparation Courses
               </h3>
+              <p className="text-foreground/70 text-base leading-relaxed max-w-2xl mx-auto">
+                The JLPT levels below are provided for general understanding.
+                Currently, the Woxsen Japan Centre offers structured preparation for
+                JLPT N5. Higher levels will be introduced progressively as the
+                programme develops.
+              </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {levels.map((level, idx) => (
@@ -159,59 +143,14 @@ export default function JLPTPage() {
             </div>
           </div>
 
-          {/* Program Details */}
-          <div className="bg-foreground rounded-xl p-8 md:p-12 mb-12">
-            <div className="text-center mb-10">
-              <h3 className="text-white font-serif text-2xl md:text-3xl font-normal tracking-wide">
-                Program Features
-              </h3>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              <div className="text-center">
-                <div className="w-14 h-14 bg-accent/20 rounded-xl flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl">👨‍🏫</span>
-                </div>
-                <h4 className="text-accent font-semibold mb-2">Expert Instruction</h4>
-                <p className="text-white/70 text-sm leading-relaxed">
-                  Native Japanese instructors with extensive experience in language pedagogy.
-                </p>
-              </div>
-              <div className="text-center">
-                <div className="w-14 h-14 bg-accent/20 rounded-xl flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl">🎌</span>
-                </div>
-                <h4 className="text-accent font-semibold mb-2">Immersive Learning</h4>
-                <p className="text-white/70 text-sm leading-relaxed">
-                  Experience Japanese culture through language with conversational focus.
-                </p>
-              </div>
-              <div className="text-center">
-                <div className="w-14 h-14 bg-accent/20 rounded-xl flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl">📝</span>
-                </div>
-                <h4 className="text-accent font-semibold mb-2">Practice & Support</h4>
-                <p className="text-white/70 text-sm leading-relaxed">
-                  Regular mock exams, personalized feedback, and peer study groups.
-                </p>
-              </div>
-              <div className="text-center">
-                <div className="w-14 h-14 bg-accent/20 rounded-xl flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl">💼</span>
-                </div>
-                <h4 className="text-accent font-semibold mb-2">Career Ready</h4>
-                <p className="text-white/70 text-sm leading-relaxed">
-                  Business Japanese and intercultural competence training included.
-                </p>
-              </div>
-            </div>
-          </div>
+
         </div>
       </section>
 
       {/* Enroll CTA */}
       <section className="w-full py-24 px-6 md:px-12 lg:px-20 bg-accent/10">
         <div className="max-w-4xl mx-auto text-center">
-          <div className="text-6xl mb-6">📚</div>
+          {/* <div className="text-6xl mb-6">📚</div> */}
           <h2 className="text-foreground font-serif text-3xl md:text-5xl font-normal tracking-wide mb-6">
             Start Your Japanese Journey
           </h2>

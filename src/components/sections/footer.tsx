@@ -45,7 +45,7 @@ export default function Footer() {
       <div className="relative py-16 px-6 md:px-12 lg:px-20">
         <div className="max-w-7xl mx-auto">
           {/* Top Section - Newsletter CTA */}
-          <div className="mb-16 pb-12 border-b border-white/10">
+          {/* <div className="mb-16 pb-12 border-b border-white/10">
             <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-8">
               <div>
                 <h3 className="text-2xl md:text-3xl font-serif font-normal mb-2">Stay Informed</h3>
@@ -65,7 +65,7 @@ export default function Footer() {
                 </button>
               </div>
             </div>
-          </div>
+          </div> */}
 
           {/* Main Footer Content */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
@@ -80,13 +80,13 @@ export default function Footer() {
                   className="object-contain"
                 />
               </div>
-              <h3 className="text-xl font-semibold mb-3 tracking-tight">Woxsen Japan Centre</h3>
+              <h3 className="text-2xl font-semibold mb-3 ">Woxsen Japan Centre</h3>
               <p className="text-white/60 text-sm leading-relaxed mb-6">
                 The Woxsen Japan Centre
                 facilitates academic collaboration, language education, and
                 structured engagement with Japan.              </p>
               {/* Social Links */}
-              <div className="flex gap-3">
+              {/* <div className="flex gap-3">
                 {socialLinks.map((social, idx) => (
                   <a
                     key={idx}
@@ -99,7 +99,7 @@ export default function Footer() {
                     <span className="text-lg">{social.icon}</span>
                   </a>
                 ))}
-              </div>
+              </div> */}
             </div>
 
             {/* Quick Links */}

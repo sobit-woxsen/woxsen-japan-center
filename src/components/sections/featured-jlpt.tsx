@@ -106,7 +106,7 @@ export default function FeaturedJLPT() {
         </div>
 
         {/* Features - Cleaner Layout */}
-        <div className={`flex flex-wrap justify-center gap-8 md:gap-16 mb-12 transition-all duration-700 delay-300 ${isVisible ? "opacity-100" : "opacity-0"}`}>
+        {/* <div className={`flex flex-wrap justify-center gap-8 md:gap-16 mb-12 transition-all duration-700 delay-300 ${isVisible ? "opacity-100" : "opacity-0"}`}>
           {features.map((feature, idx) => (
             <div key={idx} className="flex items-center gap-3">
               <div className="w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center">
@@ -115,7 +115,7 @@ export default function FeaturedJLPT() {
               <span className="text-white/60 text-sm">{feature.text}</span>
             </div>
           ))}
-        </div>
+        </div> */}
 
         {/* CTA */}
         <div className={`text-center transition-all duration-700 delay-400 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}>

@@ -95,60 +95,10 @@ export default function JoinPage() {
       </section>
 
       {/* How It Works */}
-      <section className="w-full py-20 px-6 md:px-12 lg:px-20 bg-accent/5">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <span className="text-accent font-sans text-sm tracking-widest font-bold uppercase mb-4 block">
-              Getting Started
-            </span>
-            <h2 className="text-foreground font-serif text-3xl md:text-4xl font-normal tracking-wide">
-              How It Works
-            </h2>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {steps.map((step, idx) => (
-              <div key={idx} className="relative text-center">
-                <div className="text-accent/20 font-serif text-7xl font-bold mb-4">
-                  {step.number}
-                </div>
-                <h3 className="text-foreground font-semibold text-xl mb-3">{step.title}</h3>
-                <p className="text-foreground/70 text-sm leading-relaxed">{step.description}</p>
-                {idx < steps.length - 1 && (
-                  <div className="hidden md:block absolute top-12 right-0 translate-x-1/2 text-accent/30 text-3xl">
-                    →
-                  </div>
-                )}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+
 
       {/* Benefits Grid */}
-      <section className="w-full py-20 px-6 md:px-12 lg:px-20 bg-background">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <span className="text-accent font-sans text-sm tracking-widest font-bold uppercase mb-4 block">
-              Why Join
-            </span>
-            <h2 className="text-foreground font-serif text-3xl md:text-4xl font-normal tracking-wide">
-              Membership Benefits
-            </h2>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {benefits.map((benefit, idx) => (
-              <div
-                key={idx}
-                className="bg-accent/5 rounded-xl p-6 hover:bg-accent/10 transition-colors"
-              >
-                <div className="text-3xl mb-4">{benefit.icon}</div>
-                <h3 className="text-foreground font-semibold text-lg mb-2">{benefit.title}</h3>
-                <p className="text-foreground/70 text-sm leading-relaxed">{benefit.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+
 
       {/* Registration Cards */}
       <section className="w-full py-20 px-6 md:px-12 lg:px-20 bg-accent/5">
