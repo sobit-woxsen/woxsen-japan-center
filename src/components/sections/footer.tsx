@@ -75,13 +75,13 @@ export default function Footer() {
                 <Image
                   src="/images/logos/white-20logo.png"
                   alt="Woxsen Japan Centre"
-                  width={80}
-                  height={80}
+                  width={100}
+                  height={100}
                   className="object-contain"
                 />
               </div>
-              <h3 className="text-2xl font-semibold mb-3 ">Woxsen Japan Centre</h3>
-              <p className="text-white/60 text-sm leading-relaxed mb-6">
+              <h3 className="text-3xl font-semibold mb-3 ">Woxsen Japan Centre</h3>
+              <p className="text-white/60 text-medium leading-relaxed mb-6">
                 The Woxsen Japan Centre
                 facilitates academic collaboration, language education, and
                 structured engagement with Japan.              </p>
@@ -104,13 +104,13 @@ export default function Footer() {
 
             {/* Quick Links */}
             <div>
-              <h4 className="text-accent text-sm font-bold uppercase tracking-wider mb-4">Quick Links</h4>
+              <h4 className="text-accent text-lg font-bold uppercase tracking-wider mb-4">Quick Links</h4>
               <ul className="space-y-3">
                 {quickLinks.map((link, idx) => (
                   <li key={idx}>
                     <Link
                       href={link.href}
-                      className="text-white/60 hover:text-accent transition-colors text-sm inline-flex items-center gap-2 group"
+                      className="text-white/60 hover:text-accent transition-colors text-medium inline-flex items-center gap-2 group"
                     >
                       <span className="w-0 h-px bg-accent group-hover:w-3 transition-all" />
                       {link.name}
@@ -122,16 +122,16 @@ export default function Footer() {
 
             {/* Contact */}
             <div>
-              <h4 className="text-accent text-sm font-bold uppercase tracking-wider mb-4">Contact</h4>
+              <h4 className="text-accent text-lg font-bold uppercase tracking-wider mb-4">Contact</h4>
               <div className="space-y-4 text-sm">
                 <div>
-                  <p className="text-white/40 text-xs uppercase tracking-wider mb-1">Email</p>
-                  <a href="mailto:japan.centre@woxsen.edu.in" className="text-white/80 hover:text-accent transition-colors">
+                  <p className="text-white/40 text-medium uppercase tracking-wider mb-1">Email</p>
+                  <a href="mailto:japan.centre@woxsen.edu.in" className="text-white/80  hover:text-accent transition-colors">
                     japan.centre@woxsen.edu.in
                   </a>
                 </div>
                 <div>
-                  <p className="text-white/40 text-xs uppercase tracking-wider mb-1">Location</p>
+                  <p className="text-white/40 text-medium uppercase tracking-wider mb-1">Location</p>
                   <p className="text-white/60">
                     Woxsen University<br />
                     Hyderabad, India
@@ -142,7 +142,7 @@ export default function Footer() {
 
             {/* Partners */}
             <div>
-              <h4 className="text-accent text-sm font-bold uppercase tracking-wider mb-4">Our Partners</h4>
+              <h4 className="text-accent text-lg font-bold uppercase tracking-wider mb-4">Our Partners</h4>
               <div className="flex flex-wrap gap-3">
                 {partners.map((partner, idx) => (
                   <div
@@ -172,7 +172,7 @@ export default function Footer() {
 
           {/* Bottom Footer */}
           <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-white/40 text-sm">
-            <p>© 2025 Woxsen Japan Centre. All rights reserved.</p>
+            <p>© 2026 Woxsen Japan Centre. All rights reserved.</p>
             <div className="flex items-center gap-6">
               <Link href="/privacy" className="hover:text-accent transition-colors">
                 Privacy Policy
@@ -191,6 +191,9 @@ export default function Footer() {
           </div>
         </div>
       </div>
+
+      {/* Full Width Map */}
+
     </footer>
   )
 }

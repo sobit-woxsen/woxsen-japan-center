@@ -92,7 +92,7 @@ export default function FeaturedEvents() {
                       year: "numeric",
                     })}
                   </p>
-                  <h3 className="text-white font-serif text-lg font-normal leading-tight group-hover:text-accent transition-colors">
+                  <h3 className="text-white font-serif text-3xl font-normal leading-tight group-hover:text-accent transition-colors">
                     {event.title}
                   </h3>
                 </div>
@@ -100,7 +100,7 @@ export default function FeaturedEvents() {
 
               {/* Hover Arrow */}
               <div className="p-4 flex items-center justify-between border-t border-accent/10">
-                <span className="text-foreground/60 text-xs">View Details</span>
+                <span className="text-foreground/60 text-sm">View Details</span>
                 <span className="text-accent group-hover:translate-x-1 transition-transform">→</span>
               </div>
             </Link>

@@ -109,16 +109,16 @@ export default function Hero() {
           <Image
             src="/wjc-logo.png"
             alt="Woxsen Japan Centre Logo"
-            width={300}
-            height={300}
+            width={350}
+            height={350}
             priority
-            className="relative w-64 md:w-80 lg:w-96 h-auto drop-shadow-2xl"
+            className="relative w-110 md:w-100 lg:w-120 h-auto drop-shadow-2xl"
           />
         </div>
 
         {/* Title - Larger */}
         <div className={`mb-5 transition-all duration-700 ${titleVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
-          <h1 className="text-white font-serif text-5xl md:text-7xl lg:text-8xl font-normal tracking-wide drop-shadow-lg">
+          <h1 className="text-white font-serif text-4xl md:text-5xl lg:text-6xl font-normal tracking-wide drop-shadow-lg">
             Woxsen Japan Centre
           </h1>
         </div>

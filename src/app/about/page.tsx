@@ -35,7 +35,7 @@ const highlights = [
   { number: "2025", label: "Inaugurated" },
   { number: "7+", label: "Faculty" },
   { number: "18+", label: "Student Leaders" },
-  { number: "100+", label: "Members" },
+  { number: "150+", label: "Members" },
 ]
 
 const teamPreview = [
@@ -53,9 +53,16 @@ export default function AboutPage() {
       <section className="w-full py-20 px-6 md:px-12 lg:px-20 bg-background texture-overlay">
         <div className="max-w-5xl mx-auto text-center">
           <p className="text-foreground/80 text-lg md:text-xl leading-relaxed mb-12 max-w-3xl mx-auto">
-            The Woxsen Japan Centre is a university-led initiative dedicated to fostering intercultural dialogue
-            and strengthening the India–Japan relationship through academic collaboration, cultural exchange,
-            and professional engagement.
+            The Woxsen Japan Centre is an institutional platform
+            at Woxsen University dedicated to advancing academic, cultural, and
+            industry engagement with Japan. The Centre supports Japanese
+            language education, cultural initiatives, academic collaboration, and
+            international partnerships, creating opportunities for students and
+            faculty to engage with Japan’s traditions, values, and contemporary
+            practices. Through interdisciplinary participation and experiential
+            learning, the Centre aims to foster global awareness, cross-cultural
+            understanding, and meaningful international exposure within the
+            university community.
           </p>
 
           {/* Mini Stats */}
@@ -131,7 +138,7 @@ export default function AboutPage() {
       </section>
 
       {/* Core Values */}
-      <section className="w-full py-24 px-6 md:px-12 lg:px-20 bg-background texture-overlay">
+      {/* <section className="w-full py-24 px-6 md:px-12 lg:px-20 bg-background texture-overlay">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <span className="text-accent font-sans text-sm tracking-widest font-bold uppercase mb-4 block">What We Stand For</span>
@@ -152,7 +159,7 @@ export default function AboutPage() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Team Preview */}
       <section className="w-full py-24 px-6 md:px-12 lg:px-20 bg-accent/5">
@@ -216,24 +223,24 @@ export default function AboutPage() {
                 className="group bg-accent/5 rounded-xl p-8 hover:bg-accent/10 transition-all duration-300 border border-transparent hover:border-accent/20 hover:shadow-lg"
               >
                 {/* Logo */}
-                <div className="w-full h-24 bg-white rounded-lg p-4 flex items-center justify-center mb-6 shadow-sm group-hover:shadow-md transition-all">
+                <div className="w-full h-32 bg-white rounded-lg p-4 flex items-center justify-center mb-6 shadow-sm group-hover:shadow-md transition-all">
                   <Image
                     src={partner.logo || "/placeholder.svg"}
                     alt={partner.title}
-                    width={200}
-                    height={100}
+                    width={250}
+                    height={150}
                     className="w-full h-full object-contain"
                   />
                 </div>
 
-                <h3 className="text-foreground font-serif text-2xl font-medium mb-4 group-hover:text-accent transition-colors">
+                <h3 className="text-foreground font-serif text-3xl font-medium mb-4 group-hover:text-accent transition-colors">
                   {partner.title}
                 </h3>
-                <p className="text-foreground/70 text-sm leading-relaxed mb-5">{partner.description}</p>
+                <p className="text-foreground/70 text-medium leading-relaxed mb-5">{partner.description}</p>
 
                 <div className="space-y-2 mb-5">
                   {partner.benefits.map((benefit, bidx) => (
-                    <div key={bidx} className="flex items-center gap-2 text-sm">
+                    <div key={bidx} className="flex items-center gap-2 text-medium">
                       <span className="text-accent">✓</span>
                       <span className="text-foreground/80">{benefit}</span>
                     </div>
@@ -244,7 +251,7 @@ export default function AboutPage() {
                   href={partner.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-accent hover:text-accent/80 text-sm font-semibold transition-colors"
+                  className="inline-flex items-center gap-2 text-accent hover:text-accent/80 text-medium   font-medium transition-colors"
                 >
                   Visit Website →
                 </a>

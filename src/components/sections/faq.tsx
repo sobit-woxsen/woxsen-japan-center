@@ -131,7 +131,7 @@ export default function FAQ() {
         </div>
 
         {/* Contact CTA */}
-        <div className={`mt-16 text-center transition-all duration-700 delay-500 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
+        {/* <div className={`mt-16 text-center transition-all duration-700 delay-500 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
           <div className="inline-block bg-foreground rounded-xl p-8 md:p-10">
             <div className="text-3xl mb-4 w-full">
               <MessageCircle className="h-8 text-red-500 align-middle w-full" />
@@ -150,7 +150,7 @@ export default function FAQ() {
               <span>→</span>
             </a>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   )

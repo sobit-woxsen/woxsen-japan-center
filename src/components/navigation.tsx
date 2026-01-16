@@ -71,12 +71,16 @@ export default function Navigation() {
   ]
 
   return (
-    <nav ref={navRef} className="absolute top-6 left-1/2 -translate-x-1/2 z-20 md:top-8">
+    <nav ref={navRef} className="absolute top-6 right-6 z-20 md:right-auto md:left-1/2 md:-translate-x-1/2 md:top-8">
       {/* Desktop Navigation */}
-      <ul className="hidden md:flex gap-8 items-center">
+      <ul className="hidden md:flex gap-8 items-center ">
         {navLinks.map((link) => (
           <li key={link.href}>
-            <Link href={link.href} className={getLinkClassName(link.href)}>
+            <Link
+              href={link.href}
+              className={getLinkClassName(link.href)}
+              style={{ fontFamily: '"Times New Roman MT Extra Bold", "Times New Roman", Times, serif', fontSize: "1rem" }}
+            >
               {link.label}
             </Link>
           </li>
@@ -118,6 +122,7 @@ export default function Navigation() {
               <Link
                 href={link.href}
                 className={getMobileLinkClassName(link.href)}
+                style={{ fontFamily: '"Times New Roman MT Extra Bold", "Times New Roman", Times, serif' }}
                 onClick={() => setIsMenuOpen(false)}
               >
                 {link.label}

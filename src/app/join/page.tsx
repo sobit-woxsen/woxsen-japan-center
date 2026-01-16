@@ -283,7 +283,7 @@ export default function JoinPage() {
       </section>
 
       {/* Contact Section */}
-      <section className="w-full py-16 px-6 md:px-12 lg:px-20 bg-foreground">
+      {/* <section className="w-full py-16 px-6 md:px-12 lg:px-20 bg-foreground">
         <div className="max-w-4xl mx-auto text-center">
           <h3 className="text-white font-serif text-2xl md:text-3xl font-normal mb-4">
             Still Have Questions?
@@ -298,7 +298,7 @@ export default function JoinPage() {
             ✉️ japan.centre@woxsen.edu.in
           </a>
         </div>
-      </section>
+      </section> */}
 
       <Footer />
     </main>

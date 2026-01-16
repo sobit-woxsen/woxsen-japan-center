@@ -8,7 +8,7 @@ import CountUp from "@/components/ui/count-up"
 const highlights = [
   { number: "2025", label: "Established" },
   { number: "7+", label: "Faculty" },
-  { number: "100+", label: "Members" },
+  { number: "150+", label: "Members" },
 ]
 
 export default function FeaturedAbout() {
@@ -58,10 +58,16 @@ export default function FeaturedAbout() {
             </h2>
 
             <p className="text-foreground/60 text-base leading-relaxed mb-8">
-              The Woxsen Japan Centre is a university-led initiative dedicated to fostering
-              intercultural dialogue and strengthening the India–Japan relationship through
-              academic collaboration, cultural exchange, and professional engagement.
-              Inaugurated on 2nd April 2025 by Mr. Muneo Takahashi, Consul-General of Japan in Chennai.
+              The Woxsen Japan Centre is an institutional platform
+              at Woxsen University dedicated to advancing academic, cultural, and
+              industry engagement with Japan. The Centre supports Japanese
+              language education, cultural initiatives, academic collaboration, and
+              international partnerships, creating opportunities for students and
+              faculty to engage with Japan’s traditions, values, and contemporary
+              practices. Through interdisciplinary participation and experiential
+              learning, the Centre aims to foster global awareness, cross-cultural
+              understanding, and meaningful international exposure within the
+              university community.
             </p>
 
             {/* Stats Row */}

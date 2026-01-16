@@ -19,7 +19,7 @@ export default function PageHeader({ title, subtitle, watermark = "日本" }: Pa
   }, [])
 
   return (
-    <section className="relative w-full min-h-[50vh] md:min-h-[45vh] bg-foreground flex items-center justify-center overflow-hidden">
+    <section className="relative w-full h-[30vh] md:h-[40vh] bg-foreground flex items-center justify-center overflow-hidden">
       {/* Background Gradient */}
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-gradient-to-b from-foreground via-foreground to-foreground/95" />

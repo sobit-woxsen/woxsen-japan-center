@@ -75,30 +75,43 @@ export default function About() {
           </div>
 
           <p className="mt-8 text-foreground/70 text-lg md:text-xl text-center max-w-3xl mx-auto leading-relaxed">
-            Woxsen Japan Centre promotes understanding and collaboration between Japan and the world's leading business
-            institutions.
+            The Woxsen Japan Centre is an institutional platform
+            at Woxsen University dedicated to advancing academic, cultural, and
+            industry engagement with Japan. The Centre supports Japanese
+            language education, cultural initiatives, academic collaboration, and
+            international partnerships, creating opportunities for students and
+            faculty to engage with Japan’s traditions, values, and contemporary
+            practices. Through interdisciplinary participation and experiential
+            learning, the Centre aims to foster global awareness, cross-cultural
+            understanding, and meaningful international exposure within the
+            university community.
           </p>
         </div>
 
         {/* Content Blocks */}
         <ContentBlock
           title="OUR MISSION"
-          content="We empower leaders and entrepreneurs through transformative education rooted in Japanese business philosophy. By bridging Eastern wisdom with global innovation, we prepare the next generation to drive sustainable growth and cultural understanding."
+          content="To strengthen India–Japan relations at Woxsen University by 
+promoting intercultural understanding through Japanese language 
+education, cultural engagement, academic collaboration, and 
+experiential learning opportunities for students and faculty. "
           imageSrc="/mission-japan.jpg"
         />
 
         <ContentBlock
           title="OUR VISION"
-          content="To establish Woxsen Japan Centre as the premier hub for developing globally-minded leaders who embody Japanese values of excellence, integrity, and harmonious collaboration while driving meaningful impact across continents."
+          content="To establish the Woxsen Japan Centre as a leading platform for Indo
+Japanese academic and cultural collaboration, fostering global 
+awareness, cultural literacy, and sustained engagement with Japan."
           imageSrc="/vision-japan.jpg"
           reverse
         />
 
-        <ContentBlock
+        {/* <ContentBlock
           title="CORE VALUES"
           content="Excellence in all endeavors, respect for diverse perspectives, commitment to continuous improvement (kaizen), and building sustainable partnerships. We believe in creating value through thoughtful leadership and ethical business practices."
           imageSrc="/values-japan.jpg"
-        />
+        /> */}
       </div>
     </section>
   )
