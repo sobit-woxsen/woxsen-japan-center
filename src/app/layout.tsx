@@ -3,7 +3,8 @@ import type { Metadata, Viewport } from "next"
 import "./globals.css"
 import Logo from "@/components/logo"
 import localFont from "next/font/local"
-import { Geist_Mono, Noto_Sans_JP, Hina_Mincho } from "next/font/google"
+import { Geist_Mono, Noto_Sans_JP, Playfair_Display } from "next/font/google"
+import SplashScreen from "@/components/ui/splash-screen"
 
 
 const aspekta = localFont({
@@ -13,10 +14,10 @@ const aspekta = localFont({
 })
 const geistMono = Geist_Mono({ subsets: ["latin"], variable: "--font-mono" })
 
-const hinaMincho = Hina_Mincho({
+const playfairDisplay = Playfair_Display({
   subsets: ["latin"],
   variable: "--font-serif",
-  weight: "400",
+  weight: ["400", "500", "600", "700"],
 })
 
 const notoSansJP = Noto_Sans_JP({
@@ -48,8 +49,9 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${aspekta.variable} ${geistMono.variable} ${hinaMincho.variable} ${notoSansJP.variable}`}>
+    <html lang="en" className={`${aspekta.variable} ${geistMono.variable} ${playfairDisplay.variable} ${notoSansJP.variable}`}>
       <body className="font-sans bg-background text-foreground overflow-x-hidden body-texture">
+        <SplashScreen />
         {children}
       </body>
     </html>

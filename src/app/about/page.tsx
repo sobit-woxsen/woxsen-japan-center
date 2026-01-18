@@ -71,7 +71,7 @@ export default function AboutPage() {
               <div key={idx} className="text-center">
                 <CountUp
                   end={stat.number}
-                  className="text-accent font-serif text-3xl md:text-4xl font-normal mb-1 block"
+                  className="text-foreground font-serif text-3xl md:text-4xl font-normal mb-1 block"
                 />
                 <div className="text-foreground/60 text-sm tracking-wide">{stat.label}</div>
               </div>
@@ -81,12 +81,12 @@ export default function AboutPage() {
       </section>
 
       {/* Mission & Vision */}
-      <section className="w-full py-24 px-6 md:px-12 lg:px-20 bg-accent/5">
+      <section className="w-full py-24 px-6 md:px-12 lg:px-20 bg-muted">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Mission */}
-            <div className="bg-background rounded-xl p-8 md:p-10 border border-accent/10">
-              <span className="text-accent font-sans text-sm tracking-widest font-bold uppercase mb-4 block">Our Mission</span>
+            <div className="bg-background rounded-none p-8 md:p-10 border border-foreground/10">
+              <span className="text-foreground font-sans text-sm tracking-widest font-bold uppercase mb-4 block">Our Mission</span>
               <h2 className="text-foreground font-serif text-2xl md:text-3xl font-normal tracking-wide mb-6">
                 Bridging Cultures Through Education
               </h2>
@@ -99,8 +99,8 @@ export default function AboutPage() {
             </div>
 
             {/* Vision */}
-            <div className="bg-background rounded-xl p-8 md:p-10 border border-accent/10">
-              <span className="text-accent font-sans text-sm tracking-widest font-bold uppercase mb-4 block">Our Vision</span>
+            <div className="bg-background rounded-none p-8 md:p-10 border border-foreground/10">
+              <span className="text-foreground font-sans text-sm tracking-widest font-bold uppercase mb-4 block">Our Vision</span>
               <h2 className="text-foreground font-serif text-2xl md:text-3xl font-normal tracking-wide mb-6">
                 A Future of Shared Understanding
               </h2>
@@ -117,7 +117,7 @@ export default function AboutPage() {
       {/* Leadership Quote */}
       <section className="w-full py-20 px-6 md:px-12 lg:px-20 bg-foreground">
         <div className="max-w-4xl mx-auto text-center">
-          <div className="text-accent/30 text-7xl font-serif mb-4">"</div>
+          <div className="text-foreground/30 text-7xl font-serif mb-4">"</div>
           <blockquote className="text-white text-xl md:text-2xl font-serif leading-relaxed mb-8 -mt-8">
             Together we are, Together we will
           </blockquote>
@@ -127,7 +127,7 @@ export default function AboutPage() {
               alt="Dr. Brundaban Mishra"
               width={56}
               height={56}
-              className="w-14 h-14 rounded-full object-cover border-2 border-accent"
+              className="w-14 h-14 rounded-none object-cover border-2 border-foreground"
             />
             <div className="text-left">
               <p className="text-white font-semibold">Dr. Brundaban Mishra</p>
@@ -141,7 +141,7 @@ export default function AboutPage() {
       {/* <section className="w-full py-24 px-6 md:px-12 lg:px-20 bg-background texture-overlay">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <span className="text-accent font-sans text-sm tracking-widest font-bold uppercase mb-4 block">What We Stand For</span>
+            <span className="text-foreground font-sans text-sm tracking-widest font-bold uppercase mb-4 block">What We Stand For</span>
             <h2 className="text-foreground font-serif text-4xl md:text-5xl font-normal tracking-wide">
               Our Core Values
             </h2>
@@ -152,7 +152,7 @@ export default function AboutPage() {
               { title: "Academic Excellence", description: "Providing world-class Japanese language education and professional development opportunities." },
               { title: "Authentic Experience", description: "Offering genuine insights into Japanese culture, traditions, and contemporary society." },
             ].map((value, idx) => (
-              <div key={idx} className="group bg-accent/5 rounded-xl p-8 text-center hover:bg-accent/10 transition-all border border-transparent hover:border-accent/20 hover:shadow-lg">
+              <div key={idx} className="group bg-foreground/5 rounded-none p-8 text-center hover:bg-foreground/10 transition-all border border-transparent hover:border-foreground/20 hover:shadow-lg">
                 <h3 className="text-foreground font-serif text-2xl font-normal mb-3">{value.title}</h3>
                 <p className="text-foreground/70 text-md leading-relaxed">{value.description}</p>
               </div>
@@ -162,25 +162,25 @@ export default function AboutPage() {
       </section> */}
 
       {/* Team Preview */}
-      <section className="w-full py-24 px-6 md:px-12 lg:px-20 bg-accent/5">
+      <section className="w-full py-24 px-6 md:px-12 lg:px-20 bg-muted">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row md:items-end md:justify-between mb-12">
             <div>
-              <span className="text-accent font-sans text-sm tracking-widest font-bold uppercase mb-4 block">Leadership</span>
+              <span className="text-foreground font-sans text-sm tracking-widest font-bold uppercase mb-4 block">Leadership</span>
               <h2 className="text-foreground font-serif text-3xl md:text-4xl font-normal tracking-wide">
                 Meet Our Team
               </h2>
             </div>
             <Link
               href="/team"
-              className="mt-4 md:mt-0 text-accent hover:text-accent/80 font-semibold text-sm transition-colors"
+              className="mt-4 md:mt-0 text-foreground hover:text-foreground/80 font-semibold text-sm transition-colors"
             >
               View Full Team →
             </Link>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
             {teamPreview.map((member, idx) => (
-              <div key={idx} className="group relative rounded-xl overflow-hidden">
+              <div key={idx} className="group relative rounded-none overflow-hidden">
                 <div className="aspect-[3/4] relative">
                   <Image
                     src={member.image}
@@ -191,7 +191,7 @@ export default function AboutPage() {
                   <div className="absolute inset-0 bg-gradient-to-t from-foreground/90 via-transparent to-transparent" />
                 </div>
                 <div className="absolute bottom-0 left-0 right-0 p-6">
-                  <span className="inline-block bg-accent/90 text-foreground text-xs font-semibold px-3 py-1 rounded-full mb-2">
+                  <span className="inline-block bg-foreground/90 text-foreground text-xs font-semibold px-3 py-1 rounded-none mb-2">
                     {member.role}
                   </span>
                   <h3 className="text-white font-serif text-xl">{member.name}</h3>
@@ -206,7 +206,7 @@ export default function AboutPage() {
       <section className="w-full py-24 px-6 md:px-12 lg:px-20 bg-background texture-overlay">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <span className="text-accent font-sans text-sm tracking-widest font-bold uppercase mb-4 block">Collaborations</span>
+            <span className="text-foreground font-sans text-sm tracking-widest font-bold uppercase mb-4 block">Collaborations</span>
             <h2 className="text-foreground font-serif text-4xl md:text-5xl font-normal tracking-wide mb-6">
               Our Partnerships
             </h2>
@@ -220,10 +220,10 @@ export default function AboutPage() {
             {partnerships.map((partner, idx) => (
               <div
                 key={idx}
-                className="group bg-accent/5 rounded-xl p-8 hover:bg-accent/10 transition-all duration-300 border border-transparent hover:border-accent/20 hover:shadow-lg"
+                className="group bg-muted rounded-none p-8 hover:bg-foreground/5 transition-all duration-300 border border-foreground/10 hover:border-foreground/20 hover:shadow-lg"
               >
                 {/* Logo */}
-                <div className="w-full h-32 bg-white rounded-lg p-4 flex items-center justify-center mb-6 shadow-sm group-hover:shadow-md transition-all">
+                <div className="w-full h-32 bg-white rounded-none p-4 flex items-center justify-center mb-6 shadow-sm group-hover:shadow-md transition-all">
                   <Image
                     src={partner.logo || "/placeholder.svg"}
                     alt={partner.title}
@@ -233,7 +233,7 @@ export default function AboutPage() {
                   />
                 </div>
 
-                <h3 className="text-foreground font-serif text-3xl font-medium mb-4 group-hover:text-accent transition-colors">
+                <h3 className="text-foreground font-serif text-3xl font-medium mb-4 group-hover:text-foreground transition-colors">
                   {partner.title}
                 </h3>
                 <p className="text-foreground/70 text-medium leading-relaxed mb-5">{partner.description}</p>
@@ -241,7 +241,7 @@ export default function AboutPage() {
                 <div className="space-y-2 mb-5">
                   {partner.benefits.map((benefit, bidx) => (
                     <div key={bidx} className="flex items-center gap-2 text-medium">
-                      <span className="text-accent">✓</span>
+                      <span className="text-foreground">✓</span>
                       <span className="text-foreground/80">{benefit}</span>
                     </div>
                   ))}
@@ -251,7 +251,7 @@ export default function AboutPage() {
                   href={partner.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-accent hover:text-accent/80 text-medium   font-medium transition-colors"
+                  className="inline-flex items-center gap-2 text-foreground hover:text-foreground/80 text-medium   font-medium transition-colors"
                 >
                   Visit Website →
                 </a>
@@ -260,7 +260,7 @@ export default function AboutPage() {
           </div>
 
           {/* Become a Partner CTA */}
-          {/* <div className="bg-foreground rounded-xl p-8 md:p-12 text-center">
+          {/* <div className="bg-foreground rounded-none p-8 md:p-12 text-center">
             <h3 className="text-white font-serif text-2xl md:text-3xl font-normal mb-4">
               Interested in Partnering With Us?
             </h3>
@@ -269,7 +269,7 @@ export default function AboutPage() {
             </p>
             <a
               href="mailto:japan.centre@woxsen.edu.in"
-              className="inline-flex items-center gap-2 bg-accent hover:bg-accent/90 text-foreground font-semibold px-6 py-3 rounded-lg transition-all hover:scale-105 border border-accent/50"
+              className="inline-flex items-center gap-2 bg-foreground hover:bg-foreground/90 text-foreground font-semibold px-6 py-3 rounded-none transition-all hover:scale-105 border border-foreground/50"
             >
               Contact Us for Partnerships
             </a>
@@ -278,9 +278,9 @@ export default function AboutPage() {
       </section>
 
       {/* CTA Section */}
-      {/* <section className="w-full py-24 px-6 md:px-12 lg:px-20 bg-accent/10">
+      {/* <section className="w-full py-24 px-6 md:px-12 lg:px-20 bg-foreground/10">
         <div className="max-w-4xl mx-auto text-center">
-          <span className="text-accent font-sans text-sm tracking-widest font-bold uppercase mb-4 block">Get Involved</span>
+          <span className="text-foreground font-sans text-sm tracking-widest font-bold uppercase mb-4 block">Get Involved</span>
           <h2 className="text-foreground font-serif text-3xl md:text-5xl font-normal tracking-wide mb-6">
             Be Part of Our Journey
           </h2>
@@ -290,13 +290,13 @@ export default function AboutPage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Link
               href="/join"
-              className="bg-accent hover:bg-accent/90 text-foreground font-semibold px-8 py-4 rounded-lg transition-all hover:scale-105 text-base border border-accent/50"
+              className="bg-foreground hover:bg-foreground/90 text-foreground font-semibold px-8 py-4 rounded-none transition-all hover:scale-105 text-base border border-foreground/50"
             >
               Join Our Community
             </Link>
             <Link
               href="/events"
-              className="border border-foreground/20 text-foreground hover:bg-foreground/10 hover:border-foreground/40 font-semibold px-8 py-4 rounded-lg transition-all text-base"
+              className="border border-foreground/20 text-foreground hover:bg-foreground/10 hover:border-foreground/40 font-semibold px-8 py-4 rounded-none transition-all text-base"
             >
               Explore Events
             </Link>

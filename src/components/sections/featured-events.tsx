@@ -30,12 +30,12 @@ export default function FeaturedEvents() {
   }, [])
 
   return (
-    <section ref={sectionRef} className="w-full py-24 px-6 md:px-12 lg:px-20 bg-accent/5 overflow-hidden">
+    <section ref={sectionRef} className="w-full py-24 px-6 md:px-12 lg:px-20 bg-muted overflow-hidden">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className={`flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4 transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
           <div>
-            <span className="text-accent font-sans text-sm tracking-widest font-bold uppercase mb-4 block">
+            <span className="text-foreground font-sans text-sm tracking-widest font-bold uppercase mb-4 block">
               Recent Events
             </span>
             <h2 className="text-foreground font-serif text-4xl md:text-5xl font-normal tracking-wide">
@@ -44,7 +44,7 @@ export default function FeaturedEvents() {
           </div>
           <Link
             href="/events"
-            className="text-accent hover:text-accent/80 text-sm tracking-tight font-semibold transition-colors inline-flex items-center gap-2"
+            className="text-foreground hover:text-foreground/80 text-sm tracking-tight font-semibold transition-colors inline-flex items-center gap-2"
           >
             View All Events
             <span>→</span>
@@ -57,7 +57,7 @@ export default function FeaturedEvents() {
             <Link
               key={event.slug}
               href={`/events/${event.slug}`}
-              className={`group bg-background rounded-xl overflow-hidden border border-accent/10 hover:border-accent/30 transition-all duration-500 hover:shadow-xl ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+              className={`group bg-background rounded-none overflow-hidden border border-foreground/10 hover:border-foreground/30 transition-all duration-500 hover:shadow-xl ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
                 }`}
               style={{ transitionDelay: `${idx * 100}ms` }}
             >
@@ -78,7 +78,7 @@ export default function FeaturedEvents() {
 
                 {/* Category Badge */}
                 <div className="absolute top-3 right-3">
-                  <span className="bg-accent/90 text-foreground text-[10px] font-bold px-2 py-1 rounded-sm">
+                  <span className="bg-foreground/90 text-foreground text-[10px] font-bold px-2 py-1 rounded-none">
                     {event.category}
                   </span>
                 </div>
@@ -92,27 +92,22 @@ export default function FeaturedEvents() {
                       year: "numeric",
                     })}
                   </p>
-                  <h3 className="text-white font-serif text-3xl font-normal leading-tight group-hover:text-accent transition-colors">
+                  <h3 className="text-white font-serif text-3xl font-normal leading-tight group-hover:text-foreground transition-colors">
                     {event.title}
                   </h3>
                 </div>
               </div>
 
               {/* Hover Arrow */}
-              <div className="p-4 flex items-center justify-between border-t border-accent/10">
+              <div className="p-4 flex items-center justify-between border-t border-foreground/10">
                 <span className="text-foreground/60 text-sm">View Details</span>
-                <span className="text-accent group-hover:translate-x-1 transition-transform">→</span>
+                <span className="text-foreground group-hover:translate-x-1 transition-transform">→</span>
               </div>
             </Link>
           ))}
         </div>
 
-        {/* Decorative Line */}
-        <div className={`flex items-center justify-center gap-4 mt-16 transition-all duration-700 delay-500 ${isVisible ? "opacity-100" : "opacity-0"}`}>
-          <div className="w-16 h-px bg-accent/30" />
-          <span className="text-accent/40 text-2xl">🌸</span>
-          <div className="w-16 h-px bg-accent/30" />
-        </div>
+
       </div>
     </section>
   )

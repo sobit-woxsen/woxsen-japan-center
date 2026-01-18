@@ -57,7 +57,7 @@ export default function PageHeader({ title, subtitle, watermark = "日本" }: Pa
       <div className="relative z-10 text-center px-6 py-20">
         {/* Subtitle Above */}
         <p
-          className={`text-accent text-sm md:text-base tracking-widest uppercase font-semibold mb-4 transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
+          className={`text-white/70 text-sm md:text-base tracking-widest uppercase font-semibold mb-4 transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
             }`}
         >
           {subtitle}
@@ -73,7 +73,7 @@ export default function PageHeader({ title, subtitle, watermark = "日本" }: Pa
 
         {/* Accent Line */}
         <div
-          className={`mx-auto w-16 h-1 bg-accent rounded-full transition-all duration-700 delay-200 ${isVisible ? "opacity-100 scale-100" : "opacity-0 scale-0"
+          className={`mx-auto w-16 h-1 bg-white rounded-none transition-all duration-700 delay-200 ${isVisible ? "opacity-100 scale-100" : "opacity-0 scale-0"
             }`}
         />
       </div>

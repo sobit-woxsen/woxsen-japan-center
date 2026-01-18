@@ -38,7 +38,7 @@ export default function FeaturedAbout() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* Left: Single Clean Image */}
           <div className={`transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
-            <div className="relative aspect-[4/3] rounded-sm overflow-hidden">
+            <div className="relative aspect-[4/3] rounded-none overflow-hidden">
               <Image
                 src="/images/others/woxsen-japan-center.png"
                 alt="Japan Centre"
@@ -50,7 +50,7 @@ export default function FeaturedAbout() {
 
           {/* Right: About Content */}
           <div className={`transition-all duration-1000 delay-200 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
-            <span className="text-accent font-sans text-sm tracking-widest font-bold uppercase mb-4 block">
+            <span className="text-foreground font-sans text-sm tracking-widest font-bold uppercase mb-4 block">
               About Us
             </span>
             <h2 className="text-foreground font-serif text-3xl md:text-4xl lg:text-5xl font-normal tracking-wide mb-6">
@@ -76,7 +76,7 @@ export default function FeaturedAbout() {
                 <div key={idx}>
                   <CountUp
                     end={stat.number}
-                    className="text-accent font-serif text-2xl md:text-3xl font-normal block"
+                    className="text-foreground font-serif text-2xl md:text-3xl font-normal block"
                   />
                   <div className="text-foreground/40 text-xs tracking-wider uppercase mt-1">{stat.label}</div>
                 </div>
@@ -85,7 +85,7 @@ export default function FeaturedAbout() {
 
             <Link
               href="/about"
-              className="inline-flex items-center gap-2 text-accent font-semibold text-sm hover:gap-3 transition-all"
+              className="inline-flex items-center gap-2 text-foreground font-semibold text-sm hover:gap-3 transition-all"
             >
               Learn More About Us
               <span>→</span>

@@ -14,7 +14,7 @@ export default function EventsPage() {
       {/* <section className="w-full py-24 px-6 md:px-12 lg:px-20 bg-background texture-overlay">
         <div className="max-w-4xl mx-auto text-center">
           <div className="mb-12">
-            <span className="text-accent font-sans text-sm tracking-widest font-bold uppercase mb-4 block">
+            <span className="text-foreground font-sans text-sm tracking-widest font-bold uppercase mb-4 block">
               UPCOMING EVENTS
             </span>
           </div>
@@ -26,7 +26,7 @@ export default function EventsPage() {
           </p>
 
 
-          <div className="py-16 px-8 bg-accent/5 rounded-2xl border border-accent/10">
+          <div className="py-16 px-8 bg-foreground/5 rounded-none border border-foreground/10">
             <div className="text-6xl mb-6">🎌</div>
             <h3 className="text-foreground font-serif text-3xl md:text-4xl font-normal tracking-wide mb-4">
               Coming Soon...
@@ -45,7 +45,7 @@ export default function EventsPage() {
         </p>
         <div className="max-w-7xl mx-auto ">
           <div className="text-center mb-16">
-            <span className="text-accent font-sans text-sm tracking-widest font-bold uppercase mb-4 block">
+            <span className="text-foreground font-sans text-sm tracking-widest font-bold uppercase mb-4 block">
               KEY INITIATIVES
             </span>
             <h2 className="text-foreground font-serif text-4xl md:text-5xl font-normal tracking-wide mb-6">
@@ -60,7 +60,7 @@ export default function EventsPage() {
               { title: "Knowledge Exchange", description: "Guest lectures, panel discussions, and pop-culture forums" },
               { title: "Global Partnerships", description: "Student exchanges and collaborative projects with Japanese partners" },
             ].map((item, idx) => (
-              <div key={idx} className="group bg-accent/5 rounded-xl p-6 text-center hover:bg-accent/10 transition-all border border-transparent hover:border-accent/20 hover:shadow-lg">
+              <div key={idx} className="group bg-muted rounded-none p-6 text-center hover:bg-foreground/5 transition-all border border-foreground/10 hover:border-foreground/20 hover:shadow-lg">
                 <h3 className="text-foreground font-serif text-xl font-normal mb-3">{item.title}</h3>
                 <p className="text-foreground/70 text-sm leading-relaxed">{item.description}</p>
               </div>
@@ -70,11 +70,11 @@ export default function EventsPage() {
       </section>
 
       {/* Past Events Section */}
-      <section className="w-full py-24 px-6 md:px-12 lg:px-20 bg-accent/5">
+      <section className="w-full py-24 px-6 md:px-12 lg:px-20 bg-muted">
         <div className="max-w-7xl mx-auto">
           {/* Past Events Header */}
           <div className="mb-16 text-center">
-            <span className="text-accent font-sans text-sm tracking-widest font-bold uppercase mb-4 block">
+            <span className="text-foreground font-sans text-sm tracking-widest font-bold uppercase mb-4 block">
               PAST EVENTS AND HIGHLIGHTS
             </span>
             <p className="text-foreground/70 text-lg max-w-2xl mx-auto">
@@ -88,7 +88,7 @@ export default function EventsPage() {
               <Link
                 key={event.slug}
                 href={`/events/${event.slug}`}
-                className="group bg-background rounded-xl overflow-hidden border border-accent/10 hover:border-accent/30 transition-all hover:shadow-xl"
+                className="group bg-background rounded-none overflow-hidden border border-foreground/10 hover:border-foreground/30 transition-all hover:shadow-xl"
               >
                 {/* Image Header */}
                 <div className="relative aspect-[16/9] overflow-hidden">
@@ -107,7 +107,7 @@ export default function EventsPage() {
 
                   {/* Category Badge */}
                   <div className="absolute bottom-3 left-3">
-                    <span className="bg-accent/90 text-foreground text-xs font-bold px-3 py-1 rounded-sm">
+                    <span className="bg-foreground/90 text-foreground text-xs font-bold px-3 py-1 rounded-none">
                       {event.category}
                     </span>
                   </div>
@@ -124,14 +124,14 @@ export default function EventsPage() {
                   </p>
                   <div className="flex items-start justify-between gap-4">
                     <div>
-                      <h3 className="text-foreground font-serif text-3xl font-normal tracking-wide mb-2 group-hover:text-accent transition-colors">
+                      <h3 className="text-foreground font-serif text-3xl font-normal tracking-wide mb-2 group-hover:text-foreground transition-colors">
                         {event.title}
                       </h3>
                       <p className="text-foreground/60 text-medium leading-relaxed line-clamp-2">
                         {event.description}
                       </p>
                     </div>
-                    <ArrowUpRight className="w-5 h-5 text-accent flex-shrink-0 mt-1 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+                    <ArrowUpRight className="w-5 h-5 text-foreground flex-shrink-0 mt-1 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                   </div>
                 </div>
               </Link>

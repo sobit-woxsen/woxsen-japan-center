@@ -16,7 +16,7 @@ export default function VerticalTitle({ title, subtitle, className, align = 'lef
                 <div className="writing-vertical-rl text-4xl md:text-5xl font-serif tracking-widest text-primary font-normal leading-relaxed select-none">
                     {title}
                 </div>
-                <div className="h-24 w-[1px] bg-accent mt-4"></div>
+                <div className="h-24 w-[1px] bg-foreground mt-4"></div>
             </div>
 
             {/* Grid Pattern Decoration (Subtle) */}

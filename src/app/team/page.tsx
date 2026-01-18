@@ -113,7 +113,7 @@ function TeamMemberCard({
   return (
     <div
       ref={cardRef}
-      className={`group relative rounded-xl overflow-hidden transition-all duration-700 ease-out cursor-pointer ${isVisible
+      className={`group relative rounded-none overflow-hidden transition-all duration-700 ease-out cursor-pointer ${isVisible
         ? "opacity-100 translate-y-0 scale-100"
         : "opacity-0 translate-y-12 scale-95"
         } ${featured ? "lg:col-span-1" : ""}`}
@@ -134,25 +134,25 @@ function TeamMemberCard({
         <div className="absolute inset-0 bg-gradient-to-t from-foreground via-foreground/30 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-300" />
 
         {/* Japanese Corner Accents */}
-        <div className="absolute top-3 left-3 w-6 h-6 border-l-2 border-t-2 border-accent/50 opacity-0 group-hover:opacity-100 transition-all duration-300" />
-        <div className="absolute top-3 right-3 w-6 h-6 border-r-2 border-t-2 border-accent/50 opacity-0 group-hover:opacity-100 transition-all duration-300" />
-        <div className="absolute bottom-3 left-3 w-6 h-6 border-l-2 border-b-2 border-accent/50 opacity-0 group-hover:opacity-100 transition-all duration-300" />
-        <div className="absolute bottom-3 right-3 w-6 h-6 border-r-2 border-b-2 border-accent/50 opacity-0 group-hover:opacity-100 transition-all duration-300" />
+        <div className="absolute top-3 left-3 w-6 h-6 border-l-2 border-t-2 border-foreground/50 opacity-0 group-hover:opacity-100 transition-all duration-300" />
+        <div className="absolute top-3 right-3 w-6 h-6 border-r-2 border-t-2 border-foreground/50 opacity-0 group-hover:opacity-100 transition-all duration-300" />
+        <div className="absolute bottom-3 left-3 w-6 h-6 border-l-2 border-b-2 border-foreground/50 opacity-0 group-hover:opacity-100 transition-all duration-300" />
+        <div className="absolute bottom-3 right-3 w-6 h-6 border-r-2 border-b-2 border-foreground/50 opacity-0 group-hover:opacity-100 transition-all duration-300" />
 
         {/* Japanese Hanko (Seal) Effect */}
-        <div className="absolute top-4 right-4 w-9 h-9 border-2 border-red-500/70 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 bg-red-500/10">
+        <div className="absolute top-4 right-4 w-9 h-9 border-2 border-red-500/70 rounded-none flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 bg-red-500/10">
           <span className="text-red-500/80 text-sm font-bold">人</span>
         </div>
 
         {/* Accent Border on hover */}
-        <div className="absolute inset-0 border-2 border-transparent group-hover:border-accent/40 transition-colors duration-300 rounded-xl" />
+        <div className="absolute inset-0 border-2 border-transparent group-hover:border-foreground/40 transition-colors duration-300 rounded-none" />
       </div>
 
       {/* Content Overlay */}
       <div className="absolute inset-0 flex flex-col justify-end p-5">
         {/* Role Badge */}
         <div className="transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
-          <span className="inline-block bg-accent/90 text-foreground text-xs font-semibold px-3 py-1 rounded-sm mb-3 tracking-wide">
+          <span className="inline-block bg-foreground/90 text-foreground text-xs font-semibold px-3 py-1 rounded-none mb-3 tracking-wide">
             {member.role}
           </span>
         </div>
@@ -170,7 +170,7 @@ function TeamMemberCard({
         )}
 
         {/* Decorative Line */}
-        <div className="w-0 h-0.5 bg-accent mt-3 group-hover:w-12 transition-all duration-500" />
+        <div className="w-0 h-0.5 bg-foreground mt-3 group-hover:w-12 transition-all duration-500" />
       </div>
     </div>
   )
@@ -185,7 +185,7 @@ export default function TeamPage() {
       <section className="w-full py-24 px-6 md:px-12 lg:px-20 bg-background texture-overlay">
         <div className="max-w-7xl mx-auto">
           <div className="mb-8">
-            <span className="text-accent font-sans text-sm tracking-widest font-bold uppercase mb-2 block">Leadership</span>
+            <span className="text-foreground font-sans text-sm tracking-widest font-bold uppercase mb-2 block">Leadership</span>
             <h2 className="text-foreground font-serif text-4xl md:text-5xl font-normal tracking-wide">
               Faculty & Leadership
             </h2>
@@ -203,10 +203,10 @@ export default function TeamPage() {
       </section>
 
       {/* Student Community Section */}
-      <section className="w-full py-24 px-6 md:px-12 lg:px-20 bg-accent/5">
+      <section className="w-full py-24 px-6 md:px-12 lg:px-20 bg-muted">
         <div className="max-w-7xl mx-auto">
           <div className="mb-8">
-            <span className="text-accent font-sans text-sm tracking-widest font-bold uppercase mb-2 block">Community</span>
+            <span className="text-foreground font-sans text-sm tracking-widest font-bold uppercase mb-2 block">Community</span>
             <h2 className="text-foreground font-serif text-4xl md:text-5xl font-normal tracking-wide">
               Student Community Leadership
             </h2>
@@ -240,13 +240,13 @@ export default function TeamPage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Link
               href="/join"
-              className="bg-accent hover:bg-accent/90 text-foreground font-semibold px-8 py-4 rounded-lg transition-all hover:scale-105 text-base"
+              className="bg-foreground hover:bg-foreground/90 text-foreground font-semibold px-8 py-4 rounded-none transition-all hover:scale-105 text-base"
             >
               Apply for Membership
             </Link>
             <a
               href="mailto:japan.centre@woxsen.edu.in"
-              className="border-2 border-white/30 text-white hover:bg-white/10 font-semibold px-8 py-4 rounded-lg transition-all text-base"
+              className="border-2 border-white/30 text-white hover:bg-white/10 font-semibold px-8 py-4 rounded-none transition-all text-base"
             >
               Contact Us
             </a>

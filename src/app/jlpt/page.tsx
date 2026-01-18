@@ -80,7 +80,7 @@ export default function JLPTPage() {
         <div className="max-w-7xl mx-auto">
           {/* Introduction */}
           <div className="mb-20 text-center">
-            <span className="text-accent font-sans text-sm tracking-widest font-bold uppercase mb-4 block">
+            <span className="text-foreground font-sans text-sm tracking-widest font-bold uppercase mb-4 block">
               Language Excellence
             </span>
             <h2 className="text-foreground font-serif text-4xl md:text-5xl font-normal tracking-wide mb-6">
@@ -103,7 +103,7 @@ export default function JLPTPage() {
           {/* JLPT Levels Grid */}
           <div className="mb-24">
             <div className="text-center mb-12">
-              <span className="text-accent font-sans text-sm tracking-widest font-bold uppercase mb-4 block">
+              <span className="text-foreground font-sans text-sm tracking-widest font-bold uppercase mb-4 block">
                 Course Levels
               </span>
               <h3 className="text-foreground font-serif text-3xl md:text-4xl font-normal tracking-wide mb-4">
@@ -120,11 +120,11 @@ export default function JLPTPage() {
               {levels.map((level, idx) => (
                 <div
                   key={idx}
-                  className={`relative group p-8 rounded-xl border border-accent/20 bg-gradient-to-b ${level.color} hover:border-accent/50 transition-all duration-300 hover:shadow-lg hover:-translate-y-1`}
+                  className={`relative group p-8 rounded-none border border-foreground/20 bg-gradient-to-b ${level.color} hover:border-foreground/50 transition-all duration-300 hover:shadow-lg hover:-translate-y-1`}
                 >
                   <div className="text-5xl mb-4">{level.emoji}</div>
                   <div className="flex items-baseline gap-2 mb-2">
-                    <h3 className="text-accent font-serif text-3xl font-normal">{level.level}</h3>
+                    <h3 className="text-foreground font-serif text-3xl font-normal">{level.level}</h3>
                     <span className="text-foreground/50 text-sm">• {level.duration}</span>
                   </div>
                   <p className="text-foreground font-semibold text-lg mb-3">{level.title}</p>
@@ -133,7 +133,7 @@ export default function JLPTPage() {
                   <div className="space-y-2">
                     {level.topics.map((topic, topicIdx) => (
                       <div key={topicIdx} className="flex items-start gap-2">
-                        <span className="text-accent text-sm">✓</span>
+                        <span className="text-foreground text-sm">✓</span>
                         <span className="text-foreground/70 text-sm">{topic}</span>
                       </div>
                     ))}
@@ -148,7 +148,7 @@ export default function JLPTPage() {
       </section>
 
       {/* Enroll CTA */}
-      <section className="w-full py-24 px-6 md:px-12 lg:px-20 bg-accent/10">
+      <section className="w-full py-24 px-6 md:px-12 lg:px-20 bg-muted">
         <div className="max-w-4xl mx-auto text-center">
           {/* <div className="text-6xl mb-6">📚</div> */}
           <h2 className="text-foreground font-serif text-3xl md:text-5xl font-normal tracking-wide mb-6">
@@ -159,17 +159,17 @@ export default function JLPTPage() {
             Our expert instructors are ready to guide you every step of the way.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <a
+            <Link
               href="https://docs.google.com/forms/d/e/1FAIpQLSenfpbj8b4zINjx9z0DnqeB0yaTVev_XLvP5rKchMYEI49q3w/viewform"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-accent hover:bg-accent/90 text-foreground font-semibold px-8 py-4 rounded-lg transition-all hover:scale-105 text-base"
+              className="bg-foreground hover:bg-foreground/90 text-foreground font-normal px-8 py-4 rounded-none transition-all hover:scale-105 text-base"
             >
               Enroll Now
-            </a>
+            </Link>
             <Link
               href="/join"
-              className="border-2 border-foreground/30 text-foreground hover:bg-foreground/10 font-semibold px-8 py-4 rounded-lg transition-all text-base"
+              className="border-1 border-foreground/30 text-foreground hover:bg-foreground/10 font-normal px-8 py-4 rounded-none transition-all text-base"
             >
               Join Community First
             </Link>

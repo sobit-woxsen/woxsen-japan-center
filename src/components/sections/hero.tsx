@@ -3,7 +3,6 @@
 import { useState, useEffect, useRef } from "react"
 import Image from "next/image"
 import Navigation from "@/components/navigation"
-import SakuraEffect from "@/components/ui/sakura-effect"
 
 const heroImages = [
   "/images/hero/wjc.jpg",
@@ -82,13 +81,6 @@ export default function Hero() {
         ))}
       </div>
 
-      {/* Reddish Gradient Overlay */}
-      <div className="absolute inset-0 z-[1] bg-gradient-to-b from-red-900/60 via-red-800/30 to-foreground/70" />
-      <div className="absolute inset-0 z-[1] bg-gradient-to-r from-red-900/20 via-transparent to-red-900/20" />
-
-      {/* Sakura Petal Animation */}
-      <SakuraEffect petalCount={12} />
-
       {/* Japanese Watermark - Subtle */}
       <div className="absolute inset-0 z-[2] flex items-center justify-center pointer-events-none">
         <span className="font-serif text-[12rem] md:text-[18rem] text-white/[0.03] select-none">
@@ -101,18 +93,17 @@ export default function Hero() {
 
       {/* Hero Content */}
       <div className="relative flex flex-col items-center justify-center z-10 text-center px-6 h-screen">
-        {/* Logo with Glow */}
+        {/* Logo */}
         <div
           className={`mb-1 relative transition-all duration-1000 ease-out ${logoVisible ? 'opacity-100 scale-100 translate-y-0' : 'opacity-0 scale-95 translate-y-4'}`}
         >
-          <div className="absolute inset-0 bg-accent/20 blur-3xl rounded-full scale-150" />
           <Image
             src="/wjc-logo.png"
             alt="Woxsen Japan Centre Logo"
             width={350}
             height={350}
             priority
-            className="relative w-110 md:w-100 lg:w-120 h-auto drop-shadow-2xl"
+            className="w-110 md:w-100 lg:w-120 h-auto"
           />
         </div>
 
@@ -124,7 +115,7 @@ export default function Hero() {
         </div>
 
         {/* Accent Line */}
-        <div className={`w-20 h-1 bg-accent rounded-full mb-6 transition-all duration-500 ${titleVisible ? 'opacity-100 w-20' : 'opacity-0 w-0'}`} />
+        <div className={`w-20 h-1 bg-white rounded-none mb-6 transition-all duration-500 ${titleVisible ? 'opacity-100 w-20' : 'opacity-0 w-0'}`} />
 
         {/* Subtitle - Larger */}
         <p className={`text-white/80 text-lg md:text-xl tracking-wide max-w-lg font-light transition-all duration-700 ${showContent ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>

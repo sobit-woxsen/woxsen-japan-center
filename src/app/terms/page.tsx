@@ -106,7 +106,7 @@ export default function TermsOfServicePage() {
                         <h2 className="text-foreground font-serif text-3xl font-normal mb-6">Contact Us</h2>
                         <p className="text-foreground/80 leading-relaxed">
                             For questions about these Terms of Service, please contact us at:{" "}
-                            <a href="mailto:japan.centre@woxsen.edu.in" className="text-accent hover:underline">
+                            <a href="mailto:japan.centre@woxsen.edu.in" className="text-foreground hover:underline">
                                 japan.centre@woxsen.edu.in
                             </a>
                         </p>

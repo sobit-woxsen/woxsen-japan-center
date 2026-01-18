@@ -39,8 +39,8 @@ export default function Footer() {
       </div>
 
       {/* Japanese Corner Accents */}
-      <div className="absolute top-6 left-6 w-12 h-12 border-l-2 border-t-2 border-accent/20" />
-      <div className="absolute top-6 right-6 w-12 h-12 border-r-2 border-t-2 border-accent/20" />
+      <div className="absolute top-6 left-6 w-12 h-12 border-l-2 border-t-2 border-foreground/20" />
+      <div className="absolute top-6 right-6 w-12 h-12 border-r-2 border-t-2 border-foreground/20" />
 
       <div className="relative py-16 px-6 md:px-12 lg:px-20">
         <div className="max-w-7xl mx-auto">
@@ -58,9 +58,9 @@ export default function Footer() {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="Enter your email"
-                  className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder:text-white/40 focus:outline-none focus:border-accent w-64"
+                  className="px-4 py-3 bg-white/10 border border-white/20 rounded-none text-white placeholder:text-white/40 focus:outline-none focus:border-foreground w-64"
                 />
-                <button className="px-6 py-3 bg-accent text-foreground font-semibold rounded-lg hover:bg-accent/90 transition-colors">
+                <button className="px-6 py-3 bg-foreground text-white font-semibold rounded-none hover:bg-foreground/90 transition-colors">
                   Subscribe
                 </button>
               </div>
@@ -93,7 +93,7 @@ export default function Footer() {
                     href={social.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center hover:bg-accent/20 hover:border-accent/50 border border-transparent transition-all"
+                    className="w-10 h-10 rounded-none bg-white/10 flex items-center justify-center hover:bg-foreground/20 hover:border-foreground/50 border border-transparent transition-all"
                     title={social.name}
                   >
                     <span className="text-lg">{social.icon}</span>
@@ -104,15 +104,15 @@ export default function Footer() {
 
             {/* Quick Links */}
             <div>
-              <h4 className="text-accent text-lg font-bold uppercase tracking-wider mb-4">Quick Links</h4>
+              <h4 className="text-foreground text-lg font-bold uppercase tracking-wider mb-4">Quick Links</h4>
               <ul className="space-y-3">
                 {quickLinks.map((link, idx) => (
                   <li key={idx}>
                     <Link
                       href={link.href}
-                      className="text-white/60 hover:text-accent transition-colors text-medium inline-flex items-center gap-2 group"
+                      className="text-white/60 hover:text-foreground transition-colors text-medium inline-flex items-center gap-2 group"
                     >
-                      <span className="w-0 h-px bg-accent group-hover:w-3 transition-all" />
+                      <span className="w-0 h-px bg-foreground group-hover:w-3 transition-all" />
                       {link.name}
                     </Link>
                   </li>
@@ -122,11 +122,11 @@ export default function Footer() {
 
             {/* Contact */}
             <div>
-              <h4 className="text-accent text-lg font-bold uppercase tracking-wider mb-4">Contact</h4>
+              <h4 className="text-foreground text-lg font-bold uppercase tracking-wider mb-4">Contact</h4>
               <div className="space-y-4 text-sm">
                 <div>
                   <p className="text-white/40 text-medium uppercase tracking-wider mb-1">Email</p>
-                  <a href="mailto:japan.centre@woxsen.edu.in" className="text-white/80  hover:text-accent transition-colors">
+                  <a href="mailto:japan.centre@woxsen.edu.in" className="text-white/80  hover:text-foreground transition-colors">
                     japan.centre@woxsen.edu.in
                   </a>
                 </div>
@@ -142,12 +142,12 @@ export default function Footer() {
 
             {/* Partners */}
             <div>
-              <h4 className="text-accent text-lg font-bold uppercase tracking-wider mb-4">Our Partners</h4>
+              <h4 className="text-white text-lg font-bold uppercase tracking-wider mb-4">Our Partners</h4>
               <div className="flex flex-wrap gap-3">
                 {partners.map((partner, idx) => (
                   <div
                     key={idx}
-                    className="w-32 h-20 bg-white rounded-lg p-2 flex items-center justify-center hover:scale-105 transition-all duration-300 shadow-sm hover:shadow-md"
+                    className="w-32 h-20 bg-white rounded-none p-2 flex items-center justify-center hover:scale-105 transition-all duration-300 shadow-sm hover:shadow-md"
                     title={partner.name}
                   >
                     <Image
@@ -163,26 +163,21 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Divider with Decoration */}
-          <div className="flex items-center gap-4 mb-8">
-            <div className="flex-1 h-px bg-white/10" />
-            <span className="text-accent/40">🌸</span>
-            <div className="flex-1 h-px bg-white/10" />
-          </div>
+
 
           {/* Bottom Footer */}
           <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-white/40 text-sm">
             <p>© 2026 Woxsen Japan Centre. All rights reserved.</p>
             <div className="flex items-center gap-6">
-              <Link href="/privacy" className="hover:text-accent transition-colors">
+              <Link href="/privacy" className="hover:text-foreground transition-colors">
                 Privacy Policy
               </Link>
-              <Link href="/terms" className="hover:text-accent transition-colors">
+              <Link href="/terms" className="hover:text-foreground transition-colors">
                 Terms of Service
               </Link>
               <button
                 onClick={scrollToTop}
-                className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-accent/20 transition-colors group"
+                className="w-10 h-10 rounded-none bg-white/10 flex items-center justify-center hover:bg-foreground/20 transition-colors group"
                 title="Back to top"
               >
                 <span className="group-hover:-translate-y-0.5 transition-transform">↑</span>

@@ -38,10 +38,10 @@ export default function Activities() {
         {/* Section Header */}
         <div className="mb-20">
           <div className="flex items-center gap-4">
-            <h2 className="text-accent font-sans text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight">
+            <h2 className="text-foreground font-sans text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight">
               EVENTS & ACTIVITIES
             </h2>
-            <div className="flex-grow h-px bg-accent" />
+            <div className="flex-grow h-px bg-foreground" />
           </div>
 
           <p className="mt-8 text-foreground/70 text-lg md:text-xl text-center max-w-3xl mx-auto leading-relaxed">
@@ -50,16 +50,16 @@ export default function Activities() {
         </div>
 
         {/* Events List */}
-        <div className="space-y-0 border-t border-accent/20">
+        <div className="space-y-0 border-t border-foreground/20">
           {events.map((event, idx) => (
-            <div key={idx} className="border-b border-accent/20 hover:bg-white/40 transition-colors">
+            <div key={idx} className="border-b border-foreground/20 hover:bg-white/40 transition-colors">
               {/* Event Header */}
               <button
                 onClick={() => setExpandedIndex(expandedIndex === idx ? null : idx)}
                 className="w-full py-8 px-4 md:px-6 flex flex-col md:flex-row md:items-center md:justify-between gap-4 text-left"
               >
                 <div className="flex flex-col gap-2 flex-1">
-                  <p className="text-accent text-sm tracking-tight font-medium">
+                  <p className="text-foreground text-sm tracking-tight font-medium">
                     {new Date(event.date).toLocaleDateString("en-US", {
                       month: "short",
                       day: "numeric",
@@ -89,7 +89,7 @@ export default function Activities() {
                     {event.images.map((img, imgIdx) => (
                       <div
                         key={imgIdx}
-                        className="rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow"
+                        className="rounded-none overflow-hidden shadow-md hover:shadow-lg transition-shadow"
                       >
                         <Image
                           src={img || "/placeholder.svg"}

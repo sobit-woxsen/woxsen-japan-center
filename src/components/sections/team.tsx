@@ -31,7 +31,7 @@ export default function Team() {
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="mb-20">
-          <h2 className="text-accent font-sans text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight text-center">
+          <h2 className="text-foreground font-sans text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight text-center">
             LEADERSHIP TEAM
           </h2>
 
@@ -45,7 +45,7 @@ export default function Team() {
           {teamMembers.map((member, idx) => (
             <div
               key={idx}
-              className="group relative rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
+              className="group relative rounded-none overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
             >
               {/* Image */}
               <div className="relative w-full aspect-[4/5] overflow-hidden bg-muted">
@@ -60,7 +60,7 @@ export default function Team() {
               {/* Overlay */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
                 <h3 className="text-white font-sans text-xl font-semibold mb-2">{member.name}</h3>
-                <p className="text-accent text-sm tracking-tight">{member.role}</p>
+                <p className="text-foreground text-sm tracking-tight">{member.role}</p>
               </div>
             </div>
           ))}

@@ -32,7 +32,7 @@ export default async function EventDetailsPage({
                     {/* Back Link */}
                     <Link
                         href="/events"
-                        className="inline-flex items-center gap-2 text-accent hover:text-accent/80 transition-colors mb-8"
+                        className="inline-flex items-center gap-2 text-foreground hover:text-foreground/80 transition-colors mb-8"
                     >
                         ← Back to Events
                     </Link>
@@ -58,7 +58,7 @@ export default async function EventDetailsPage({
                             {event.images.map((image, idx) => (
                                 <div
                                     key={idx}
-                                    className="relative aspect-[4/3] rounded-xl overflow-hidden group"
+                                    className="relative aspect-[4/3] rounded-none overflow-hidden group"
                                 >
                                     <Image
                                         src={image}
@@ -80,7 +80,7 @@ export default async function EventDetailsPage({
                     </div>
 
                     {/* Navigation to other events */}
-                    <div className="mt-16 pt-8 border-t border-accent/20">
+                    <div className="mt-16 pt-8 border-t border-foreground/20">
                         <h3 className="text-foreground font-serif text-2xl font-normal mb-8">Other Events</h3>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                             {pastEvents
@@ -90,7 +90,7 @@ export default async function EventDetailsPage({
                                     <Link
                                         key={otherEvent.slug}
                                         href={`/events/${otherEvent.slug}`}
-                                        className="group bg-background rounded-xl overflow-hidden border border-accent/10 hover:border-accent/30 transition-all hover:shadow-lg"
+                                        className="group bg-background rounded-none overflow-hidden border border-foreground/10 hover:border-foreground/30 transition-all hover:shadow-lg"
                                     >
                                         {/* Image */}
                                         <div className="relative aspect-[16/10] overflow-hidden">
@@ -108,7 +108,7 @@ export default async function EventDetailsPage({
 
                                             {/* Category Badge */}
                                             <div className="absolute bottom-2 left-2">
-                                                <span className="bg-accent/90 text-foreground text-[10px] font-bold px-2 py-1 rounded-sm">
+                                                <span className="bg-foreground/90 text-foreground text-[10px] font-bold px-2 py-1 rounded-none">
                                                     {otherEvent.category}
                                                 </span>
                                             </div>
@@ -123,7 +123,7 @@ export default async function EventDetailsPage({
                                                     year: "numeric",
                                                 })}
                                             </p>
-                                            <h4 className="text-foreground font-serif text-base font-normal group-hover:text-accent transition-colors line-clamp-2">
+                                            <h4 className="text-foreground font-serif text-base font-normal group-hover:text-foreground transition-colors line-clamp-2">
                                                 {otherEvent.title}
                                             </h4>
                                         </div>

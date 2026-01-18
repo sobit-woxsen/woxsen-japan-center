@@ -36,25 +36,25 @@ export default function Navigation() {
     }
   }, [isMenuOpen])
 
-  // Dynamic link styles - always white now
+  // Dynamic link styles - Alta font style (light, wide tracking, clean)
   const getLinkClassName = (href: string) => {
-    // Special button styling for JOIN US
+    // Special button styling for JOIN US - white outlined box
     if (href === "/join") {
-      return "bg-accent hover:bg-accent/90 text-foreground font-semibold tracking-wide px-6 py-2.5 text-sm rounded-sm transition-all hover:scale-105  shadow-accent/30"
+      return "border border-white text-white hover:bg-white hover:text-foreground font-light tracking-[0.25em] px-6 py-2.5 text-xs uppercase rounded-none transition-all"
     }
     const isActive = pathname === href || (href !== "/" && pathname.startsWith(href))
-    const activeStyle = isActive ? "border-b-2 border-current pb-0.5" : ""
-    return `text-white hover:text-accent text-sm tracking-tight transition-colors font-semibold ${activeStyle}`
+    const activeStyle = isActive ? "border-b border-current pb-1" : ""
+    return `text-white hover:text-white/60 text-xs tracking-[0.25em] uppercase transition-colors font-light ${activeStyle}`
   }
 
   const getMobileLinkClassName = (href: string) => {
-    // Special button styling for JOIN US in mobile
+    // Special button styling for JOIN US in mobile - white outlined box
     if (href === "/join") {
-      return "bg-accent hover:bg-accent/90 text-foreground font-semibold tracking-wide px-8 py-3 text-2xl rounded-sm transition-all hover:scale-105 shadow-lg shadow-accent/30"
+      return "border border-white text-white hover:bg-white hover:text-foreground font-light tracking-[0.25em] px-8 py-3 text-lg uppercase rounded-none transition-all"
     }
     const isActive = pathname === href || (href !== "/" && pathname.startsWith(href))
-    const activeStyle = isActive ? "text-accent" : "text-white"
-    return `${activeStyle} text-2xl font-serif tracking-wide hover:text-accent transition-colors`
+    const activeStyle = isActive ? "text-white/60" : "text-white"
+    return `${activeStyle} text-xl font-light tracking-[0.25em] uppercase hover:text-white/60 transition-colors`
   }
 
   // Hamburger bar color - always white
@@ -73,13 +73,13 @@ export default function Navigation() {
   return (
     <nav ref={navRef} className="absolute top-6 right-6 z-20 md:right-auto md:left-1/2 md:-translate-x-1/2 md:top-8">
       {/* Desktop Navigation */}
-      <ul className="hidden md:flex gap-8 items-center ">
+      <ul className="hidden md:flex gap-10 items-center">
         {navLinks.map((link) => (
           <li key={link.href}>
             <Link
               href={link.href}
               className={getLinkClassName(link.href)}
-              style={{ fontFamily: '"Times New Roman MT Extra Bold", "Times New Roman", Times, serif', fontSize: "1rem" }}
+              style={{ fontFamily: '"Helvetica Neue", Helvetica, Arial, sans-serif' }}
             >
               {link.label}
             </Link>
@@ -122,7 +122,7 @@ export default function Navigation() {
               <Link
                 href={link.href}
                 className={getMobileLinkClassName(link.href)}
-                style={{ fontFamily: '"Times New Roman MT Extra Bold", "Times New Roman", Times, serif' }}
+                style={{ fontFamily: '"Helvetica Neue", Helvetica, Arial, sans-serif' }}
                 onClick={() => setIsMenuOpen(false)}
               >
                 {link.label}

@@ -67,7 +67,7 @@ export default function FeaturedJLPT() {
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className={`text-center mb-16 transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
-          <span className="text-accent font-sans text-sm tracking-widest font-bold uppercase mb-4 block">
+          <span className="text-foreground font-sans text-sm tracking-widest font-bold uppercase mb-4 block">
             Language Program
           </span>
           <h2 className="text-white font-serif text-4xl md:text-5xl font-normal tracking-wide mb-6">
@@ -83,24 +83,24 @@ export default function FeaturedJLPT() {
           {levels.map((level, idx) => (
             <div
               key={idx}
-              className={`group relative bg-gradient-to-b ${level.color} rounded-xl p-6 hover:shadow-xl hover:-translate-y-1 transition-all duration-500 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+              className={`group relative bg-gradient-to-b ${level.color} rounded-none p-6 hover:shadow-xl hover:-translate-y-1 transition-all duration-500 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
                 }`}
               style={{ transitionDelay: `${idx * 100}ms` }}
             >
               {/* Japanese Kanji Watermark */}
-              <div className="absolute top-2 right-2 text-white/5 font-serif text-6xl font-bold group-hover:text-accent/10 transition-colors">
+              <div className="absolute top-2 right-2 text-white/5 font-serif text-6xl font-bold group-hover:text-foreground/10 transition-colors">
                 {level.kanji}
               </div>
 
               {/* Content */}
               <div className="relative">
-                <h3 className="text-accent font-serif text-3xl font-normal mb-1">{level.level}</h3>
+                <h3 className="text-foreground font-serif text-3xl font-normal mb-1">{level.level}</h3>
                 <p className="text-white font-semibold text-sm mb-2">{level.title}</p>
                 <p className="text-white/40 text-xs leading-relaxed">{level.description}</p>
               </div>
 
               {/* Decorative Line */}
-              <div className="w-0 h-0.5 bg-accent mt-4 group-hover:w-8 transition-all duration-500" />
+              <div className="w-0 h-0.5 bg-foreground mt-4 group-hover:w-8 transition-all duration-500" />
             </div>
           ))}
         </div>
@@ -109,7 +109,7 @@ export default function FeaturedJLPT() {
         {/* <div className={`flex flex-wrap justify-center gap-8 md:gap-16 mb-12 transition-all duration-700 delay-300 ${isVisible ? "opacity-100" : "opacity-0"}`}>
           {features.map((feature, idx) => (
             <div key={idx} className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center">
+              <div className="w-10 h-10 rounded-none bg-white/5 flex items-center justify-center">
                 <span className="text-xl">{feature.icon}</span>
               </div>
               <span className="text-white/60 text-sm">{feature.text}</span>
@@ -121,7 +121,7 @@ export default function FeaturedJLPT() {
         <div className={`text-center transition-all duration-700 delay-400 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}>
           <Link
             href="/jlpt"
-            className="inline-flex items-center gap-2 bg-accent text-foreground font-semibold px-8 py-4 rounded-lg hover:bg-accent/90 transition-all hover:scale-105"
+            className="inline-flex items-center gap-2 bg-foreground text-white font-semibold px-8 py-4 rounded-none hover:bg-foreground/90 transition-all hover:scale-105"
           >
             Explore JLPT Program
             <span>→</span>

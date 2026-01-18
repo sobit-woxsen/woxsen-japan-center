@@ -21,15 +21,15 @@ const teamHighlights = [
 
 export default function FeaturedTeam() {
   return (
-    <section className="w-full py-24 px-6 md:px-12 lg:px-20 bg-accent/5">
+    <section className="w-full py-24 px-6 md:px-12 lg:px-20 bg-foreground/5">
       <div className="max-w-7xl mx-auto">
         <div className="flex items-center justify-between mb-16">
-          <h2 className="text-accent font-sans text-4xl md:text-5xl font-semibold tracking-tight flex items-center gap-4">
+          <h2 className="text-foreground font-sans text-4xl md:text-5xl font-semibold tracking-tight flex items-center gap-4">
             <span className="text-2xl">📚</span> LEADERSHIP TEAM
           </h2>
           <Link
             href="/team"
-            className="text-accent hover:text-accent/80 text-sm tracking-tight font-semibold transition-colors"
+            className="text-foreground hover:text-foreground/80 text-sm tracking-tight font-semibold transition-colors"
           >
             FULL TEAM →
           </Link>
@@ -39,7 +39,7 @@ export default function FeaturedTeam() {
           {teamHighlights.map((member, idx) => (
             <div
               key={idx}
-              className="group relative rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-all"
+              className="group relative rounded-none overflow-hidden shadow-lg hover:shadow-2xl transition-all"
             >
               <div className="relative w-full aspect-[3/4] overflow-hidden bg-muted">
                 <Image
@@ -51,7 +51,7 @@ export default function FeaturedTeam() {
               </div>
               <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent flex flex-col justify-end p-6">
                 <h3 className="text-white font-sans text-base font-semibold">{member.name}</h3>
-                <p className="text-accent text-xs tracking-tight mt-2">{member.role}</p>
+                <p className="text-foreground text-xs tracking-tight mt-2">{member.role}</p>
               </div>
             </div>
           ))}

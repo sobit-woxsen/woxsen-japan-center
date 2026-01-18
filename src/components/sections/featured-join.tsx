@@ -33,11 +33,11 @@ export default function FeaturedJoin() {
   }, [])
 
   return (
-    <section ref={sectionRef} className="w-full py-24 px-6 md:px-12 lg:px-20 bg-accent/5 overflow-hidden">
+    <section ref={sectionRef} className="w-full py-24 px-6 md:px-12 lg:px-20 bg-foreground/5 overflow-hidden">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className={`text-center mb-16 transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
-          <span className="text-accent font-sans text-sm tracking-widest font-bold uppercase mb-4 block">
+          <span className="text-foreground font-sans text-sm tracking-widest font-bold uppercase mb-4 block">
             Get Involved
           </span>
           <h2 className="text-foreground font-serif text-4xl md:text-5xl font-normal tracking-wide mb-6">
@@ -53,7 +53,7 @@ export default function FeaturedJoin() {
           {benefits.map((benefit, idx) => (
             <div
               key={idx}
-              className={`group text-center p-6 rounded-xl bg-background border border-accent/10 hover:border-accent/30 transition-all duration-500 hover:shadow-lg ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+              className={`group text-center p-6 rounded-none bg-background border border-foreground/10 hover:border-foreground/30 transition-all duration-500 hover:shadow-lg ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
                 }`}
               style={{ transitionDelay: `${idx * 100}ms` }}
             >
@@ -72,23 +72,23 @@ export default function FeaturedJoin() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {/* Community Card */}
           <div
-            className={`group relative rounded-xl overflow-hidden transition-all duration-700 delay-300 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+            className={`group relative rounded-none overflow-hidden transition-all duration-700 delay-300 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
               }`}
           >
             <div className="absolute inset-0 bg-gradient-to-br from-accent/20 to-accent/5" />
 
             {/* Japanese Corner Accents */}
-            <div className="absolute top-4 left-4 w-6 h-6 border-l-2 border-t-2 border-accent/40" />
-            <div className="absolute top-4 right-4 w-6 h-6 border-r-2 border-t-2 border-accent/40" />
-            <div className="absolute bottom-4 left-4 w-6 h-6 border-l-2 border-b-2 border-accent/40" />
-            <div className="absolute bottom-4 right-4 w-6 h-6 border-r-2 border-b-2 border-accent/40" />
+            <div className="absolute top-4 left-4 w-6 h-6 border-l-2 border-t-2 border-foreground/40" />
+            <div className="absolute top-4 right-4 w-6 h-6 border-r-2 border-t-2 border-foreground/40" />
+            <div className="absolute bottom-4 left-4 w-6 h-6 border-l-2 border-b-2 border-foreground/40" />
+            <div className="absolute bottom-4 right-4 w-6 h-6 border-r-2 border-b-2 border-foreground/40" />
 
             <div className="relative p-8 md:p-10">
               <div className="flex items-center gap-3 mb-4">
-                <div className="w-12 h-12 rounded-lg bg-accent/20 flex items-center justify-center">
+                <div className="w-12 h-12 rounded-none bg-foreground/20 flex items-center justify-center">
                   <span className="text-2xl">🎌</span>
                 </div>
-                <span className="text-accent text-xs font-bold uppercase tracking-wider">Free Membership</span>
+                <span className="text-foreground text-xs font-bold uppercase tracking-wider">Free Membership</span>
               </div>
               <h3 className="text-foreground font-serif text-2xl font-normal mb-3">
                 Join Our Community
@@ -100,7 +100,7 @@ export default function FeaturedJoin() {
                 href="https://docs.google.com/forms/d/e/1FAIpQLSenfpbj8b4zINjx9z0DnqeB0yaTVev_XLvP5rKchMYEI49q3w/viewform"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-accent text-foreground font-semibold px-6 py-3 rounded-lg hover:bg-accent/90 transition-all hover:scale-105 border border-accent/50"
+                className="inline-flex items-center gap-2 bg-foreground text-white font-semibold px-6 py-3 rounded-none hover:bg-foreground/90 transition-all hover:scale-105 border border-foreground/50"
               >
                 Register Now
                 <ArrowUpRight className="w-4 h-4" />
@@ -110,7 +110,7 @@ export default function FeaturedJoin() {
 
           {/* JLPT Card */}
           <div
-            className={`group relative rounded-xl overflow-hidden bg-foreground transition-all duration-700 delay-400 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+            className={`group relative rounded-none overflow-hidden bg-foreground transition-all duration-700 delay-400 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
               }`}
           >
             {/* Japanese Watermark */}
@@ -119,15 +119,15 @@ export default function FeaturedJoin() {
             </div>
 
             {/* Japanese Corner Accents */}
-            <div className="absolute top-4 left-4 w-6 h-6 border-l-2 border-t-2 border-accent/30" />
-            <div className="absolute bottom-4 right-4 w-6 h-6 border-r-2 border-b-2 border-accent/30" />
+            <div className="absolute top-4 left-4 w-6 h-6 border-l-2 border-t-2 border-foreground/30" />
+            <div className="absolute bottom-4 right-4 w-6 h-6 border-r-2 border-b-2 border-foreground/30" />
 
             <div className="relative p-8 md:p-10">
               <div className="flex items-center gap-3 mb-4">
-                <div className="w-12 h-12 rounded-lg bg-accent/30 flex items-center justify-center">
+                <div className="w-12 h-12 rounded-none bg-foreground/30 flex items-center justify-center">
                   <span className="text-2xl">📖</span>
                 </div>
-                <span className="text-accent text-xs font-bold uppercase tracking-wider">Language Course</span>
+                <span className="text-foreground text-xs font-bold uppercase tracking-wider">Language Course</span>
               </div>
               <h3 className="text-white font-serif text-2xl font-normal mb-3">
                 Enroll in JLPT Course
@@ -139,7 +139,7 @@ export default function FeaturedJoin() {
                 href="https://docs.google.com/forms/d/e/1FAIpQLSczMcKyQtLQMNaZA_zrEA4ddzJVK-f5NbtOhAqtye3dIE20ew/viewform"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-accent text-foreground font-semibold px-6 py-3 rounded-lg hover:bg-accent/90 transition-all hover:scale-105 border border-accent/50"
+                className="inline-flex items-center gap-2 bg-foreground text-white font-semibold px-6 py-3 rounded-none hover:bg-foreground/90 transition-all hover:scale-105 border border-foreground/50"
               >
                 Enroll Now
                 <ArrowUpRight className="w-4 h-4" />
@@ -152,7 +152,7 @@ export default function FeaturedJoin() {
         <div className={`text-center mt-12 transition-all duration-700 delay-500 ${isVisible ? "opacity-100" : "opacity-0"}`}>
           <Link
             href="/join"
-            className="text-foreground/60 hover:text-accent text-sm transition-colors"
+            className="text-foreground/60 hover:text-foreground text-sm transition-colors"
           >
             Learn more about membership benefits →
           </Link>

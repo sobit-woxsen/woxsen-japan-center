@@ -38,7 +38,7 @@ const ContentBlock = ({
       className={`flex flex-col ${reverse ? "lg:flex-row-reverse" : "lg:flex-row"} items-center gap-12 my-20`}
     >
       <div className="flex-1">
-        <h3 className="text-accent font-sans text-3xl md:text-4xl font-semibold mb-6 tracking-wide">{title}</h3>
+        <h3 className="text-foreground font-sans text-3xl md:text-4xl font-semibold mb-6 tracking-wide">{title}</h3>
         <p className="text-foreground/80 text-base md:text-lg leading-relaxed text-justify">{content}</p>
       </div>
 
@@ -46,14 +46,14 @@ const ContentBlock = ({
         className={`flex-1 relative ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
           } transition-all duration-700`}
       >
-        <div className="relative rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow">
-          <div className="absolute inset-0 bg-accent/20 rounded-xl pointer-events-none" />
+        <div className="relative rounded-none overflow-hidden shadow-lg hover:shadow-2xl transition-shadow">
+          <div className="absolute inset-0 bg-foreground/20 rounded-none pointer-events-none" />
           <Image
             src={imageSrc || "/placeholder.svg?height=400&width=500&query=woxsen-japan"}
             alt={title}
             width={500}
             height={400}
-            className="w-full h-auto object-cover rounded-xl"
+            className="w-full h-auto object-cover rounded-none"
           />
         </div>
       </div>
@@ -68,10 +68,10 @@ export default function About() {
         {/* Section Header */}
         <div className="mb-20">
           <div className="flex items-center gap-4">
-            <h2 className="text-accent font-sans text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight">
+            <h2 className="text-foreground font-sans text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight">
               ABOUT US
             </h2>
-            <div className="flex-grow h-px bg-accent" />
+            <div className="flex-grow h-px bg-foreground" />
           </div>
 
           <p className="mt-8 text-foreground/70 text-lg md:text-xl text-center max-w-3xl mx-auto leading-relaxed">

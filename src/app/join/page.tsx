@@ -79,7 +79,7 @@ export default function JoinPage() {
       {/* Introduction */}
       <section className="w-full py-20 px-6 md:px-12 lg:px-20 bg-background texture-overlay">
         <div className="max-w-4xl mx-auto text-center">
-          <span className="text-accent font-sans text-sm tracking-widest font-bold uppercase mb-4 block">
+          <span className="text-foreground font-sans text-sm tracking-widest font-bold uppercase mb-4 block">
             Welcome
           </span>
           <h2 className="text-foreground font-serif text-3xl md:text-5xl font-normal tracking-wide mb-6">
@@ -101,10 +101,10 @@ export default function JoinPage() {
 
 
       {/* Registration Cards */}
-      <section className="w-full py-20 px-6 md:px-12 lg:px-20 bg-accent/5">
+      <section className="w-full py-20 px-6 md:px-12 lg:px-20 bg-muted">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-12">
-            <span className="text-accent font-sans text-sm tracking-widest font-bold uppercase mb-4 block">
+            <span className="text-foreground font-sans text-sm tracking-widest font-bold uppercase mb-4 block">
               Register
             </span>
             <h2 className="text-foreground font-serif text-3xl md:text-4xl font-normal tracking-wide">
@@ -113,14 +113,14 @@ export default function JoinPage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {/* Community Membership Card */}
-            <div className="group relative bg-gradient-to-br from-accent/10 to-accent/5 rounded-2xl p-8 border border-accent/20 hover:border-accent/40 transition-all duration-300 hover:shadow-xl overflow-hidden">
-              <div className="absolute top-0 right-0 w-32 h-32 bg-accent/10 rounded-full -translate-y-1/2 translate-x-1/2 blur-2xl group-hover:scale-150 transition-transform duration-500" />
+            <div className="group relative bg-gradient-to-br from-accent/10 to-accent/5 rounded-none p-8 border border-foreground/20 hover:border-foreground/40 transition-all duration-300 hover:shadow-xl overflow-hidden">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-foreground/10 rounded-none -translate-y-1/2 translate-x-1/2 blur-2xl group-hover:scale-150 transition-transform duration-500" />
               <div className="relative">
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="w-12 h-12 rounded-xl bg-accent/20 flex items-center justify-center">
+                  <div className="w-12 h-12 rounded-none bg-foreground/20 flex items-center justify-center">
                     <span className="text-2xl">🎌</span>
                   </div>
-                  <span className="text-xs font-semibold text-accent uppercase tracking-wider">Community</span>
+                  <span className="text-xs font-semibold text-foreground uppercase tracking-wider">Community</span>
                 </div>
                 <h3 className="text-foreground font-serif text-2xl font-normal mb-3">
                   Join Our Community
@@ -130,20 +130,20 @@ export default function JoinPage() {
                 </p>
                 <ul className="space-y-2 mb-6">
                   <li className="flex items-center gap-2 text-sm text-foreground/70">
-                    <span className="text-accent">✓</span> Free for all Woxsen students
+                    <span className="text-foreground">✓</span> Free for all Woxsen students
                   </li>
                   <li className="flex items-center gap-2 text-sm text-foreground/70">
-                    <span className="text-accent">✓</span> Access to cultural events
+                    <span className="text-foreground">✓</span> Access to cultural events
                   </li>
                   <li className="flex items-center gap-2 text-sm text-foreground/70">
-                    <span className="text-accent">✓</span> Community networking
+                    <span className="text-foreground">✓</span> Community networking
                   </li>
                 </ul>
                 <a
                   href="https://docs.google.com/forms/d/e/1FAIpQLSenfpbj8b4zINjx9z0DnqeB0yaTVev_XLvP5rKchMYEI49q3w/viewform"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 bg-accent text-foreground font-semibold px-6 py-3 rounded-lg hover:bg-accent/90 transition-all duration-300"
+                  className="inline-flex items-center gap-2 bg-foreground text-white font-semibold px-6 py-3 rounded-none hover:bg-foreground/90 transition-all duration-300"
                 >
                   Register Now
                   <ArrowUpRight className="w-4 h-4" />
@@ -152,14 +152,14 @@ export default function JoinPage() {
             </div>
 
             {/* JLPT Course Card */}
-            <div className="group relative bg-foreground rounded-2xl p-8 hover:shadow-xl transition-all duration-300 overflow-hidden">
-              <div className="absolute top-0 right-0 w-32 h-32 bg-accent/20 rounded-full -translate-y-1/2 translate-x-1/2 blur-2xl group-hover:scale-150 transition-transform duration-500" />
+            <div className="group relative bg-foreground rounded-none p-8 hover:shadow-xl transition-all duration-300 overflow-hidden">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-foreground/20 rounded-none -translate-y-1/2 translate-x-1/2 blur-2xl group-hover:scale-150 transition-transform duration-500" />
               <div className="relative">
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="w-12 h-12 rounded-xl bg-accent/30 flex items-center justify-center">
+                  <div className="w-12 h-12 rounded-none bg-foreground/30 flex items-center justify-center">
                     <span className="text-2xl">📖</span>
                   </div>
-                  <span className="text-xs font-semibold text-accent uppercase tracking-wider">Language Course</span>
+                  <span className="text-xs font-semibold text-foreground uppercase tracking-wider">Language Course</span>
                 </div>
                 <h3 className="text-white font-serif text-2xl font-normal mb-3">
                   Enroll in JLPT Course
@@ -169,20 +169,20 @@ export default function JoinPage() {
                 </p>
                 <ul className="space-y-2 mb-6">
                   <li className="flex items-center gap-2 text-sm text-white/70">
-                    <span className="text-accent">✓</span> Native instructors
+                    <span className="text-foreground">✓</span> Native instructors
                   </li>
                   <li className="flex items-center gap-2 text-sm text-white/70">
-                    <span className="text-accent">✓</span> All JLPT levels
+                    <span className="text-foreground">✓</span> All JLPT levels
                   </li>
                   <li className="flex items-center gap-2 text-sm text-white/70">
-                    <span className="text-accent">✓</span> Mock exams included
+                    <span className="text-foreground">✓</span> Mock exams included
                   </li>
                 </ul>
                 <a
                   href="https://docs.google.com/forms/d/e/1FAIpQLSczMcKyQtLQMNaZA_zrEA4ddzJVK-f5NbtOhAqtye3dIE20ew/viewform"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 bg-accent text-foreground font-semibold px-6 py-3 rounded-lg hover:bg-accent/90 transition-all duration-300"
+                  className="inline-flex items-center gap-2 bg-foreground text-white font-semibold px-6 py-3 rounded-none hover:bg-foreground/90 transition-all duration-300"
                 >
                   Enroll Now
                   <ArrowUpRight className="w-4 h-4" />
@@ -197,7 +197,7 @@ export default function JoinPage() {
       <section className="w-full py-20 px-6 md:px-12 lg:px-20 bg-background">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <span className="text-accent font-sans text-sm tracking-widest font-bold uppercase mb-4 block">
+            <span className="text-foreground font-sans text-sm tracking-widest font-bold uppercase mb-4 block">
               Testimonials
             </span>
             <h2 className="text-foreground font-serif text-3xl md:text-4xl font-normal tracking-wide">
@@ -208,9 +208,9 @@ export default function JoinPage() {
             {testimonials.map((testimonial, idx) => (
               <div
                 key={idx}
-                className="bg-accent/5 rounded-xl p-8 relative"
+                className="bg-muted rounded-none p-8 relative"
               >
-                <div className="text-accent/20 text-6xl font-serif absolute top-4 left-4">"</div>
+                <div className="text-foreground/20 text-6xl font-serif absolute top-4 left-4">"</div>
                 <div className="relative pt-8">
                   <p className="text-foreground/80 leading-relaxed mb-6 italic">
                     {testimonial.quote}
@@ -227,10 +227,10 @@ export default function JoinPage() {
       </section>
 
       {/* FAQ */}
-      <section className="w-full py-20 px-6 md:px-12 lg:px-20 bg-accent/5">
+      <section className="w-full py-20 px-6 md:px-12 lg:px-20 bg-background">
         <div className="max-w-3xl mx-auto">
           <div className="text-center mb-16">
-            <span className="text-accent font-sans text-sm tracking-widest font-bold uppercase mb-4 block">
+            <span className="text-foreground font-sans text-sm tracking-widest font-bold uppercase mb-4 block">
               FAQ
             </span>
             <h2 className="text-foreground font-serif text-3xl md:text-4xl font-normal tracking-wide">
@@ -241,25 +241,25 @@ export default function JoinPage() {
             {faqs.map((faq, idx) => (
               <div
                 key={idx}
-                className="group relative bg-background rounded-xl overflow-hidden border border-accent/10 hover:border-accent/30 transition-all duration-300"
+                className="group relative bg-background rounded-none overflow-hidden border border-foreground/10 hover:border-foreground/30 transition-all duration-300"
               >
                 {/* Japanese Corner Accents */}
-                <div className="absolute top-2 left-2 w-4 h-4 border-l border-t border-accent/20 opacity-0 group-hover:opacity-100 transition-opacity" />
-                <div className="absolute top-2 right-2 w-4 h-4 border-r border-t border-accent/20 opacity-0 group-hover:opacity-100 transition-opacity" />
+                <div className="absolute top-2 left-2 w-4 h-4 border-l border-t border-foreground/20 opacity-0 group-hover:opacity-100 transition-opacity" />
+                <div className="absolute top-2 right-2 w-4 h-4 border-r border-t border-foreground/20 opacity-0 group-hover:opacity-100 transition-opacity" />
 
                 <button
                   onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
-                  className="w-full px-6 py-5 text-left flex items-center gap-4 hover:bg-accent/5 transition-colors"
+                  className="w-full px-6 py-5 text-left flex items-center gap-4 hover:bg-foreground/5 transition-colors"
                 >
                   {/* Number Badge */}
-                  <span className="flex-shrink-0 w-8 h-8 rounded-lg bg-accent/10 text-accent text-sm font-bold flex items-center justify-center">
+                  <span className="flex-shrink-0 w-8 h-8 rounded-none bg-foreground/10 text-foreground text-sm font-bold flex items-center justify-center">
                     {String(idx + 1).padStart(2, "0")}
                   </span>
 
                   <span className="flex-1 text-foreground font-semibold">{faq.question}</span>
 
                   <span
-                    className={`flex-shrink-0 w-8 h-8 rounded-full border border-accent/30 text-accent flex items-center justify-center text-lg transition-transform duration-300 ${openFaq === idx ? "rotate-45 bg-accent/10" : ""
+                    className={`flex-shrink-0 w-8 h-8 rounded-none border border-foreground/30 text-foreground flex items-center justify-center text-lg transition-transform duration-300 ${openFaq === idx ? "rotate-45 bg-foreground/10" : ""
                       }`}
                   >
                     +
@@ -272,7 +272,7 @@ export default function JoinPage() {
                     }`}
                 >
                   <div className="px-6 pb-6 pl-[4.5rem]">
-                    <div className="w-12 h-0.5 bg-accent/30 mb-4" />
+                    <div className="w-12 h-0.5 bg-foreground/30 mb-4" />
                     <p className="text-foreground/70 leading-relaxed">{faq.answer}</p>
                   </div>
                 </div>
@@ -293,7 +293,7 @@ export default function JoinPage() {
           </p>
           <a
             href="mailto:japan.centre@woxsen.edu.in"
-            className="inline-flex items-center gap-2 bg-accent hover:bg-accent/90 text-foreground font-semibold px-6 py-3 rounded-lg transition-all"
+            className="inline-flex items-center gap-2 bg-foreground hover:bg-foreground/90 text-foreground font-semibold px-6 py-3 rounded-none transition-all"
           >
             ✉️ japan.centre@woxsen.edu.in
           </a>

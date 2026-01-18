@@ -12,7 +12,7 @@ const ThumbnailImage = ({ image, isSelected, onClick }: any) => {
 
   return (
     <button
-      className={`relative rounded-md overflow-hidden flex-shrink-0 transition-all duration-300 bg-accent/5 ${isSelected
+      className={`relative rounded-none overflow-hidden flex-shrink-0 transition-all duration-300 bg-foreground/5 ${isSelected
         ? "w-14 h-14 ring-2 ring-accent scale-110 z-10"
         : "w-10 h-10 opacity-40 hover:opacity-70"
         }`}
@@ -149,7 +149,7 @@ export default function GalleryPage() {
     return (
       <div style={style} className="p-2">
         <div
-          className="group relative aspect-square overflow-hidden rounded-lg cursor-pointer bg-accent/5"
+          className="group relative aspect-square overflow-hidden rounded-none cursor-pointer bg-foreground/5"
           onClick={() => setSelected(index)}
         >
           {/* Blur placeholder background */}
@@ -190,7 +190,7 @@ export default function GalleryPage() {
         <div className="max-w-7xl mx-auto">
           {/* Header */}
           <div className="text-center mb-16">
-            <span className="text-accent font-sans text-sm tracking-widest font-bold uppercase mb-4 block">
+            <span className="text-foreground font-sans text-sm tracking-widest font-bold uppercase mb-4 block">
               Photo Gallery
             </span>
             <h2 className="text-foreground font-serif text-3xl md:text-4xl font-normal tracking-wide mb-4">
@@ -227,7 +227,7 @@ export default function GalleryPage() {
               {selectedIndex + 1} / {galleryImages.length}
             </span>
             <button
-              className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-white/20 transition-colors"
+              className="w-10 h-10 rounded-none bg-white/10 flex items-center justify-center text-white hover:bg-white/20 transition-colors"
               onClick={() => setSelectedIndex(null)}
             >
               ✕
@@ -238,7 +238,7 @@ export default function GalleryPage() {
           <div className="flex-1 flex items-center justify-center px-16 relative">
             {/* Left Arrow */}
             <button
-              className="absolute left-4 w-12 h-12 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-white/20 transition-colors z-10"
+              className="absolute left-4 w-12 h-12 rounded-none bg-white/10 flex items-center justify-center text-white hover:bg-white/20 transition-colors z-10"
               onClick={goToPrevious}
             >
               ←
@@ -249,7 +249,7 @@ export default function GalleryPage() {
               {/* Blur placeholder */}
               {!lightboxImageLoaded && (
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="w-32 h-32 rounded-full border-4 border-accent/20 border-t-accent animate-spin" />
+                  <div className="w-32 h-32 rounded-none border-4 border-foreground/20 border-t-accent animate-spin" />
                 </div>
               )}
 
@@ -266,7 +266,7 @@ export default function GalleryPage() {
 
             {/* Right Arrow */}
             <button
-              className="absolute right-4 w-12 h-12 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-white/20 transition-colors z-10"
+              className="absolute right-4 w-12 h-12 rounded-none bg-white/10 flex items-center justify-center text-white hover:bg-white/20 transition-colors z-10"
               onClick={goToNext}
             >
               →
