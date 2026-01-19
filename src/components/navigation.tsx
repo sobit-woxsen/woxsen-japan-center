@@ -42,9 +42,12 @@ export default function Navigation() {
     if (href === "/join") {
       return "border border-white text-white hover:bg-white hover:text-foreground font-light tracking-[0.25em] px-6 py-2.5 text-xs uppercase rounded-none transition-all"
     }
-    const isActive = pathname === href || (href !== "/" && pathname.startsWith(href))
-    const activeStyle = isActive ? "border-b border-current pb-1" : ""
-    return `text-white hover:text-white/60 text-xs tracking-[0.25em] uppercase transition-colors font-light ${activeStyle}`
+    return "relative text-white text-xs tracking-[0.25em] uppercase transition-colors font-light group"
+  }
+
+  // Check if link is active
+  const isActiveLink = (href: string) => {
+    return pathname === href || (href !== "/" && pathname.startsWith(href))
   }
 
   const getMobileLinkClassName = (href: string) => {
@@ -52,9 +55,7 @@ export default function Navigation() {
     if (href === "/join") {
       return "border border-white text-white hover:bg-white hover:text-foreground font-light tracking-[0.25em] px-8 py-3 text-lg uppercase rounded-none transition-all"
     }
-    const isActive = pathname === href || (href !== "/" && pathname.startsWith(href))
-    const activeStyle = isActive ? "text-white/60" : "text-white"
-    return `${activeStyle} text-xl font-light tracking-[0.25em] uppercase hover:text-white/60 transition-colors`
+    return "text-white text-xl font-light tracking-[0.25em] uppercase hover:text-white/80 transition-colors"
   }
 
   // Hamburger bar color - always white
@@ -82,6 +83,14 @@ export default function Navigation() {
               style={{ fontFamily: '"Helvetica Neue", Helvetica, Arial, sans-serif' }}
             >
               {link.label}
+              {/* Animated underline - only for non-button links */}
+              {link.href !== "/join" && (
+                <span
+                  className={`absolute -bottom-1 left-0 h-[2px] bg-white transition-all duration-300 ease-out ${
+                    isActiveLink(link.href) ? "w-full" : "w-0 group-hover:w-full"
+                  }`}
+                />
+              )}
             </Link>
           </li>
         ))}

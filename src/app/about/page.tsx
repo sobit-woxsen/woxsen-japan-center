@@ -39,9 +39,9 @@ const highlights = [
 ]
 
 const teamPreview = [
-  { name: "Dr. Raul V. Rodriguez", role: "Chairman", image: "/images/team/faculty-leadership/dr-raul-v-rodriguez.webp" },
   { name: "Dr. Brundaban Mishra", role: "Director", image: "/images/team/faculty-leadership/dr-brundaban-mishra.jpg" },
-  { name: "Mr. Daisuke Tanji", role: "Deputy Director", image: "/images/team/faculty-leadership/mr-daisuke-tanji.jpg" },
+  { name: "Mr. Tanji Daisuke", role: "Deputy Director", image: "/images/team/faculty-leadership/mr-daisuke-tanji.jpg" },
+  { name: "Dr. Raul Rodriguez", role: "Chairperson", image: "/images/team/faculty-leadership/dr-raul-v-rodriguez.webp" },
 ]
 
 export default function AboutPage() {
@@ -117,7 +117,7 @@ export default function AboutPage() {
       {/* Leadership Quote */}
       <section className="w-full py-20 px-6 md:px-12 lg:px-20 bg-foreground">
         <div className="max-w-4xl mx-auto text-center">
-          <div className="text-foreground/30 text-7xl font-serif mb-4">"</div>
+          <div className="text-white/30 text-7xl font-serif mb-4">"</div>
           <blockquote className="text-white text-xl md:text-2xl font-serif leading-relaxed mb-8 -mt-8">
             Together we are, Together we will
           </blockquote>
@@ -127,7 +127,7 @@ export default function AboutPage() {
               alt="Dr. Brundaban Mishra"
               width={56}
               height={56}
-              className="w-14 h-14 rounded-none object-cover border-2 border-foreground"
+              className="w-14 h-14 rounded-none object-cover border-2 border-white"
             />
             <div className="text-left">
               <p className="text-white font-semibold">Dr. Brundaban Mishra</p>
@@ -191,7 +191,7 @@ export default function AboutPage() {
                   <div className="absolute inset-0 bg-gradient-to-t from-foreground/90 via-transparent to-transparent" />
                 </div>
                 <div className="absolute bottom-0 left-0 right-0 p-6">
-                  <span className="inline-block bg-foreground/90 text-foreground text-xs font-semibold px-3 py-1 rounded-none mb-2">
+                  <span className="inline-block bg-white text-foreground text-xs font-semibold px-3 py-1 rounded-none mb-2">
                     {member.role}
                   </span>
                   <h3 className="text-white font-serif text-xl">{member.name}</h3>

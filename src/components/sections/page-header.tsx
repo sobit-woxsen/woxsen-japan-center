@@ -47,8 +47,8 @@ export default function PageHeader({ title, subtitle, watermark = "日本" }: Pa
       <div className="absolute inset-0 bg-radial-gradient from-transparent via-transparent to-foreground/50 z-0" />
 
       {/* Decorative Lines */}
-      <div className="absolute left-8 top-1/2 -translate-y-1/2 w-px h-24 bg-gradient-to-b from-transparent via-accent/30 to-transparent hidden lg:block" />
-      <div className="absolute right-8 top-1/2 -translate-y-1/2 w-px h-24 bg-gradient-to-b from-transparent via-accent/30 to-transparent hidden lg:block" />
+      <div className="absolute left-8 top-1/2 -translate-y-1/2 w-px h-24 bg-gradient-to-b from-transparent via-white/30 to-transparent hidden lg:block" />
+      <div className="absolute right-8 top-1/2 -translate-y-1/2 w-px h-24 bg-gradient-to-b from-transparent via-white/30 to-transparent hidden lg:block" />
 
       {/* Navigation */}
       <Navigation />

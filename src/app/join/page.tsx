@@ -113,7 +113,7 @@ export default function JoinPage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {/* Community Membership Card */}
-            <div className="group relative bg-gradient-to-br from-accent/10 to-accent/5 rounded-none p-8 border border-foreground/20 hover:border-foreground/40 transition-all duration-300 hover:shadow-xl overflow-hidden">
+            <div className="group relative bg-muted rounded-none p-8 border border-foreground/20 hover:border-foreground/40 transition-all duration-300 hover:shadow-xl overflow-hidden">
               <div className="absolute top-0 right-0 w-32 h-32 bg-foreground/10 rounded-none -translate-y-1/2 translate-x-1/2 blur-2xl group-hover:scale-150 transition-transform duration-500" />
               <div className="relative">
                 <div className="flex items-center gap-3 mb-4">
@@ -159,7 +159,7 @@ export default function JoinPage() {
                   <div className="w-12 h-12 rounded-none bg-foreground/30 flex items-center justify-center">
                     <span className="text-2xl">📖</span>
                   </div>
-                  <span className="text-xs font-semibold text-foreground uppercase tracking-wider">Language Course</span>
+                  <span className="text-xs font-semibold text-white/70 uppercase tracking-wider">Language Course</span>
                 </div>
                 <h3 className="text-white font-serif text-2xl font-normal mb-3">
                   Enroll in JLPT Course
@@ -169,20 +169,20 @@ export default function JoinPage() {
                 </p>
                 <ul className="space-y-2 mb-6">
                   <li className="flex items-center gap-2 text-sm text-white/70">
-                    <span className="text-foreground">✓</span> Native instructors
+                    <span className="text-white">✓</span> Native instructors
                   </li>
                   <li className="flex items-center gap-2 text-sm text-white/70">
-                    <span className="text-foreground">✓</span> All JLPT levels
+                    <span className="text-white">✓</span> All JLPT levels
                   </li>
                   <li className="flex items-center gap-2 text-sm text-white/70">
-                    <span className="text-foreground">✓</span> Mock exams included
+                    <span className="text-white">✓</span> Mock exams included
                   </li>
                 </ul>
                 <a
                   href="https://docs.google.com/forms/d/e/1FAIpQLSczMcKyQtLQMNaZA_zrEA4ddzJVK-f5NbtOhAqtye3dIE20ew/viewform"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 bg-foreground text-white font-semibold px-6 py-3 rounded-none hover:bg-foreground/90 transition-all duration-300"
+                  className="inline-flex items-center gap-2 bg-white text-foreground font-semibold px-6 py-3 rounded-none hover:bg-white/90 transition-all duration-300"
                 >
                   Enroll Now
                   <ArrowUpRight className="w-4 h-4" />

@@ -8,68 +8,64 @@ import { useEffect, useRef, useState } from "react"
 
 const faculty = [
   {
-    name: "Dr. Raul V. Rodriguez",
-    role: "Chairman",
-    subtitle: "Vice President, Woxsen University",
-    image: "/images/team/faculty-leadership/dr-raul-v-rodriguez.webp"
-  },
-  {
-    name: "Dr. Hemachandran",
-    role: "Advisor",
-    subtitle: "Director - AI Research Centre, Woxsen University",
-    image: "/images/team/faculty-leadership/dr-hemachandran.png"
-  },
-  {
     name: "Dr. Brundaban Mishra",
     role: "Director",
-    subtitle: "Professor, Woxsen University",
+    subtitle: "Woxsen University",
     image: "/images/team/faculty-leadership/dr-brundaban-mishra.jpg"
   },
   {
-    name: "Mr. Daisuke Tanji",
+    name: "Mr. Tanji Daisuke",
     role: "Deputy Director",
-    subtitle: "CEO, Indobox Inc.",
+    subtitle: "Indobox Inc.",
     image: "/images/team/faculty-leadership/mr-daisuke-tanji.jpg"
   },
   {
-    name: "Ms. Priyanka Baynik",
-    role: "Executive Director",
-    subtitle: "International Relations",
+    name: "Dr. Raul Rodriguez",
+    role: "Chairperson",
+    subtitle: "Woxsen University",
+    image: "/images/team/faculty-leadership/dr-raul-v-rodriguez.webp"
+  },
+  {
+    name: "Ms. Priyanka Banik",
+    role: "Vice-Chairperson",
+    subtitle: "Woxsen University",
     image: "/images/team/faculty-leadership/ms-priyanka-baynik.jpeg"
   },
   {
-    name: "Ms. Nishta Jain",
+    name: "Ms. Nistha Jain",
     role: "Manager",
-    subtitle: "Associate - International Relations",
+    subtitle: "Woxsen University",
     image: "/images/team/faculty-leadership/ms-nishta-jain.jpeg"
   },
   {
     name: "Mr. Vasim Hunani",
     role: "Assistant Manager",
-    subtitle: "Junior Associate - International Relations",
+    subtitle: "Woxsen University",
     image: "/images/team/faculty-leadership/mr-vasim-hunani.jpeg"
+  },
+  {
+    name: "Dr. Hemachandran Kannan",
+    role: "Advisor",
+    subtitle: "Woxsen University",
+    image: "/images/team/faculty-leadership/dr-hemachandran.png"
+  },
+  {
+    name: "Dr. Peplluis Esteva",
+    role: "Advisor",
+    subtitle: "Woxsen University",
+    image: "/images/team/faculty-leadership/peplluis.png"
   }
 ];
 
 const studentLeadership = [
-  { name: "Praveena Kiran", role: "President", subtitle: "B.Tech, 2nd year", image: "/images/team/student-community/praveena-kiran.jpg" },
-  { name: "Mashetty Harshith Chakravarthy", role: "Vice President", subtitle: "BBA, 2nd Year", image: "/images/team/student-community/mashetty-harshith-chakravarthy.jpg" },
-  { name: "R Malsawmzuala", role: "Head of Administration", subtitle: "BBA, 3rd Year", image: "/images/team/student-community/r-malsawmzuala.jpg" },
-  { name: "Arya Vardhineni", role: "General Secretary", subtitle: "BBA, 2nd Year", image: "/images/team/student-community/arya-vardhineni.jpg" },
-  { name: "Tejo Kiran Gudipati", role: "Head of Operations", subtitle: "BBA, 2nd Year", image: "/images/team/student-community/tejo-kiran-gudipati.jpg" },
-  { name: "Neha L Suryavanshi", role: "Head of Social Media", subtitle: "MBBA, 2nd Year", image: "/images/team/student-community/neha-l-suryavanshi.jpg", scale: "scale-150", hoverScale: "group-hover:scale-[1.6]", position: "object-[50%_230%]" },
-  { name: "Kohith Pappala", role: "Head of Marketing", subtitle: "B.Tech, 2nd year", image: "/images/team/student-community/kohith-pappala.jpg" },
-  { name: "Ruthwika Prakash . M", role: "Executive Liaison", subtitle: "B.Tech, 2nd year", image: "/images/team/student-community/ruthwika-prakash-m.jpg" },
-  { name: "C. Sreeharshith Reddy", role: "Executive Liaison", subtitle: "B.Tech, 2nd Year", image: "/images/team/student-community/c-sreeharshith-reddy.jpg" },
-  { name: "Urvi Ray", role: "Executive Liaison", subtitle: "B.Des, 2nd Year", image: "/images/team/student-community/urvi-ray.jpg" },
-  { name: "Naigapula Mythilee", role: "Website Coordinator", subtitle: "BBA, 2nd Year", image: "/images/team/student-community/naigapula-mythilee.jpg" },
-  { name: "M Sai Yaswanth", role: "Senior Executive", subtitle: "B.Tech, 2nd Year", image: "/images/team/student-community/m-sai-yaswanth.jpg" },
-  { name: "Abhiram Majji", role: "Senior Executive", subtitle: "BBA, 2nd Year", image: "/images/team/student-community/abhiram-majji.jpg" },
-  { name: "Yanala Prathik Reddy", role: "Senior Executive", subtitle: "BBA, 2nd Year", image: "/images/team/student-community/yanala-prathik-reddy.jpg" },
-  { name: "Sai Rithesh Mandalapu", role: "Senior Executive", subtitle: "B.Tech, 3rd Year", image: "/images/team/student-community/sai-rithesh-mandalapu.jpg" },
-  { name: "Vansh Kumar", role: "Senior Executive", subtitle: "B.Tech, 2nd Year", image: "/images/team/student-community/vansh-kumar.jpg" },
-  { name: "Krishna Sankeerth Pagoti", role: "Senior Executive", subtitle: "B.Tech, 2nd Year", image: "/images/team/student-community/krishna-sankeerth-pagoti.jpg" },
-  { name: "Sreshta Tathiparthi", role: "Website Coordinator", subtitle: "BBA, 2nd Year", image: "/images/team/student-community/sreshta-tathiparthi.jpg", scale: "scale-150", hoverScale: "group-hover:scale-[1.6]", position: "object-[50%_200%]" }
+  { name: "Praveena Kiran", role: "President", subtitle: "B.Tech'28", image: "/images/team/student-community/praveena-kiran.jpg" },
+  { name: "Harshith Chakravarthy", role: "Vice President", subtitle: "BBA'28", image: "/images/team/student-community/mashetty-harshith-chakravarthy.jpg" },
+  { name: "Neha Suryavanshi", role: "Dept. Head - Media & Promotion", subtitle: "BBA'28", image: "/images/team/student-community/neha-l-suryavanshi.jpg", scale: "scale-[1.8]", hoverScale: "group-hover:scale-[1.6]", position: "object-[70%_180%]" },
+  { name: "Mythilee Naigapula", role: "Dept. Head - Digital Services & Records", subtitle: "BBA'28", image: "/images/team/student-community/naigapula-mythilee.jpg" },
+  { name: "Sathyapal Reddy", role: "Dept. Head - Operations & Logistics", subtitle: "BBA'28", image: "/images/team/student-community/sathyapal-reddy.jpg" },
+  { name: "Sahaj Daga", role: "Dept. Head - Outreach & Partnerships", subtitle: "BBA'28", image: "/images/team/student-community/sahaj-daga.jpg" },
+  { name: "Vaishnavi Kaling", role: "Dept. Head - Creative Studio", subtitle: "BBA'28", image: "/images/team/student-community/vaishnavi-kaling.jpg" },
+  { name: "Sreshta Tathiparthi", role: "Dept. Head - Learning & Welfare", subtitle: "BBA'28", image: "/images/team/student-community/sreshta-tathiparthi.jpg" },
 ];
 
 // Enhanced team member card component with better hover effects
@@ -139,11 +135,6 @@ function TeamMemberCard({
         <div className="absolute bottom-3 left-3 w-6 h-6 border-l-2 border-b-2 border-foreground/50 opacity-0 group-hover:opacity-100 transition-all duration-300" />
         <div className="absolute bottom-3 right-3 w-6 h-6 border-r-2 border-b-2 border-foreground/50 opacity-0 group-hover:opacity-100 transition-all duration-300" />
 
-        {/* Japanese Hanko (Seal) Effect */}
-        <div className="absolute top-4 right-4 w-9 h-9 border-2 border-red-500/70 rounded-none flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 bg-red-500/10">
-          <span className="text-red-500/80 text-sm font-bold">人</span>
-        </div>
-
         {/* Accent Border on hover */}
         <div className="absolute inset-0 border-2 border-transparent group-hover:border-foreground/40 transition-colors duration-300 rounded-none" />
       </div>
@@ -152,7 +143,7 @@ function TeamMemberCard({
       <div className="absolute inset-0 flex flex-col justify-end p-5">
         {/* Role Badge */}
         <div className="transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
-          <span className="inline-block bg-foreground/90 text-foreground text-xs font-semibold px-3 py-1 rounded-none mb-3 tracking-wide">
+          <span className="inline-block bg-foreground/90 text-white text-xs font-semibold px-3 py-1 rounded-none mb-3 tracking-wide">
             {member.role}
           </span>
         </div>
@@ -215,20 +206,29 @@ export default function TeamPage() {
             Dynamic student leaders driving engagement and cultural initiatives across campus.
           </p>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
-            {studentLeadership.map((member, idx) => (
-              <TeamMemberCard key={idx} member={member} index={idx % 5} />
-            ))}
-          </div>
+          {studentLeadership.length > 0 ? (
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
+              {studentLeadership.map((member, idx) => (
+                <TeamMemberCard key={idx} member={member} index={idx % 5} />
+              ))}
+            </div>
+          ) : (
+            <div className="py-16 px-8 bg-background rounded-none border border-foreground/10 text-center">
+              <div className="text-5xl mb-6">👥</div>
+              <h3 className="text-foreground font-serif text-2xl md:text-3xl font-normal tracking-wide mb-4">
+                Coming Soon...
+              </h3>
+              <p className="text-foreground/60 text-base">
+                Student community details will be added shortly.
+              </p>
+            </div>
+          )}
         </div>
       </section>
 
       {/* Join Our Team CTA */}
-      <section className="w-full py-24 px-6 md:px-12 lg:px-20 bg-foreground">
+      {/* <section className="w-full py-24 px-6 md:px-12 lg:px-20 bg-foreground">
         <div className="max-w-4xl mx-auto text-center">
-          <div className="mb-6">
-            <span className="text-6xl">🎌</span>
-          </div>
           <h2 className="text-white font-serif text-3xl md:text-5xl font-normal tracking-wide mb-6">
             Interested in Joining the Team?          </h2>
           <p className="text-white/70 text-lg leading-relaxed mb-10 max-w-2xl mx-auto">
@@ -252,7 +252,7 @@ export default function TeamPage() {
             </a>
           </div>
         </div>
-      </section>
+      </section> */}
 
       <Footer />
     </main>

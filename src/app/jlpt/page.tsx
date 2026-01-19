@@ -163,7 +163,7 @@ export default function JLPTPage() {
               href="https://docs.google.com/forms/d/e/1FAIpQLSenfpbj8b4zINjx9z0DnqeB0yaTVev_XLvP5rKchMYEI49q3w/viewform"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-foreground hover:bg-foreground/90 text-foreground font-normal px-8 py-4 rounded-none transition-all hover:scale-105 text-base"
+              className="bg-foreground hover:bg-foreground/90 text-white font-normal px-8 py-4 rounded-none transition-all hover:scale-105 text-base"
             >
               Enroll Now
             </Link>

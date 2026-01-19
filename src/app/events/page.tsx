@@ -62,7 +62,7 @@ export default function EventsPage() {
             ].map((item, idx) => (
               <div key={idx} className="group bg-muted rounded-none p-6 text-center hover:bg-foreground/5 transition-all border border-foreground/10 hover:border-foreground/20 hover:shadow-lg">
                 <h3 className="text-foreground font-serif text-xl font-normal mb-3">{item.title}</h3>
-                <p className="text-foreground/70 text-sm leading-relaxed">{item.description}</p>
+                <p className="text-foreground/70 text-sm">{item.description}</p>
               </div>
             ))}
           </div>
@@ -107,7 +107,7 @@ export default function EventsPage() {
 
                   {/* Category Badge */}
                   <div className="absolute bottom-3 left-3">
-                    <span className="bg-foreground/90 text-foreground text-xs font-bold px-3 py-1 rounded-none">
+                    <span className="bg-white text-foreground text-xs font-bold px-3 py-1 rounded-none">
                       {event.category}
                     </span>
                   </div>

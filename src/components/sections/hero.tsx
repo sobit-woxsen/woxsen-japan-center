@@ -5,11 +5,12 @@ import Image from "next/image"
 import Navigation from "@/components/navigation"
 
 const heroImages = [
-  "/images/hero/wjc.jpg",
-  "/images/hero/WJC 2.jpg",
-  "/images/hero/WJC 6.jpg",
-  "/images/hero/WJC 8.jpeg",
-  "/images/hero/WJC 9.jpg",
+  "/images/hero/hero1.png",
+  "/images/hero/hero2.png",
+  "/images/hero/hero3.png",
+  "/images/hero/hero4.png",
+  "/images/hero/hero5.png",
+  "/images/hero/hero6.png",
 ]
 
 export default function Hero() {
@@ -92,10 +93,10 @@ export default function Hero() {
       <Navigation />
 
       {/* Hero Content */}
-      <div className="relative flex flex-col items-center justify-center z-10 text-center px-6 h-screen">
+      <div className="relative flex flex-col items-center justify-center z-10 text-center px-6 h-screen pt-16">
         {/* Logo */}
         <div
-          className={`mb-1 relative transition-all duration-1000 ease-out ${logoVisible ? 'opacity-100 scale-100 translate-y-0' : 'opacity-0 scale-95 translate-y-4'}`}
+          className={`-mb-4 relative transition-all duration-1000 ease-out ${logoVisible ? 'opacity-100 scale-100 translate-y-0' : 'opacity-0 scale-95 translate-y-4'}`}
         >
           <Image
             src="/wjc-logo.png"

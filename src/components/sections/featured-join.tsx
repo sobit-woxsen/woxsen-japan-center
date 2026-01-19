@@ -75,7 +75,7 @@ export default function FeaturedJoin() {
             className={`group relative rounded-none overflow-hidden transition-all duration-700 delay-300 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
               }`}
           >
-            <div className="absolute inset-0 bg-gradient-to-br from-accent/20 to-accent/5" />
+            <div className="absolute inset-0 bg-gradient-to-br from-foreground/10 to-foreground/5" />
 
             {/* Japanese Corner Accents */}
             <div className="absolute top-4 left-4 w-6 h-6 border-l-2 border-t-2 border-foreground/40" />
