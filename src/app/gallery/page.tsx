@@ -39,7 +39,7 @@ export default function GalleryPage() {
           {/* Coming Soon Message */}
           <div className="text-center mb-12">
             <p className="text-foreground/50 text-lg">
-              Gallery coming soon...
+              coming soon...
             </p>
           </div>
 
