@@ -38,11 +38,7 @@ export default function Navigation() {
 
   // Dynamic link styles - Alta font style (light, wide tracking, clean)
   const getLinkClassName = (href: string) => {
-    // Special button styling for JOIN US - white outlined box
-    if (href === "/join") {
-      return "border border-white text-white hover:bg-white hover:text-foreground font-light tracking-[0.25em] px-6 py-2.5 text-xs uppercase rounded-none transition-all"
-    }
-    return "relative text-white text-xs tracking-[0.25em] uppercase transition-colors font-light group"
+    return "relative text-white text-xs tracking-[0.1em] uppercase transition-colors font-normal group"
   }
 
   // Check if link is active
@@ -70,9 +66,8 @@ export default function Navigation() {
     { href: "/jlpt", label: "JLPT" },
     { href: "/join", label: "JOIN US" },
   ]
-
   return (
-    <nav ref={navRef} className="absolute top-6 right-6 z-20 md:right-auto md:left-1/2 md:-translate-x-1/2 md:top-8">
+    <nav ref={navRef} className="absolute top-6 right-6 z-[999] md:right-auto md:left-1/2 md:-translate-x-1/2 md:top-8">
       {/* Desktop Navigation */}
       <ul className="hidden md:flex gap-10 items-center">
         {navLinks.map((link) => (
@@ -80,7 +75,10 @@ export default function Navigation() {
             <Link
               href={link.href}
               className={getLinkClassName(link.href)}
-              style={{ fontFamily: '"Helvetica Neue", Helvetica, Arial, sans-serif' }}
+              style={{ 
+                fontFamily: '"Helvetica Neue", Helvetica, Arial, sans-serif',
+                mixBlendMode: 'difference'
+              }}
             >
               {link.label}
               {/* Animated underline - only for non-button links */}
@@ -89,6 +87,7 @@ export default function Navigation() {
                   className={`absolute -bottom-1 left-0 h-[2px] bg-white transition-all duration-300 ease-out ${
                     isActiveLink(link.href) ? "w-full" : "w-0 group-hover:w-full"
                   }`}
+                  style={{ mixBlendMode: 'difference' }}
                 />
               )}
             </Link>

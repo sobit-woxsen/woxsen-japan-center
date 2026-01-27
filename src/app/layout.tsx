@@ -5,6 +5,7 @@ import Logo from "@/components/logo"
 import localFont from "next/font/local"
 import { Geist_Mono, Noto_Sans_JP, Playfair_Display } from "next/font/google"
 import SplashScreen from "@/components/ui/splash-screen"
+import Navigation from "@/components/navigation"
 
 
 const aspekta = localFont({
@@ -52,6 +53,7 @@ export default function RootLayout({
     <html lang="en" className={`${aspekta.variable} ${geistMono.variable} ${playfairDisplay.variable} ${notoSansJP.variable}`}>
       <body className="font-sans bg-background text-foreground overflow-x-hidden body-texture">
         <SplashScreen />
+        <Navigation />
         {children}
       </body>
     </html>

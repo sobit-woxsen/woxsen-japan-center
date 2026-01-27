@@ -33,8 +33,17 @@ export default function Footer() {
 
   return (
     <footer className="w-full bg-foreground text-white relative overflow-hidden">
+      {/* Liquid Glass - High Specular Shine */}
+      <div className="absolute inset-0 z-1 pointer-events-none overflow-hidden">
+        {/* 1. Curved Surface Reflection */}
+        <div className="absolute -inset-x-[30%] top-0 h-[60%] bg-linear-to-b from-white/15 via-white/5 to-transparent rounded-b-[100%] mix-blend-overlay" />
+
+
+
+
+      </div>
       {/* Japanese Watermark */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-white/[0.02] font-serif text-[20rem] font-bold pointer-events-none select-none">
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-white/2 font-serif text-[20rem] font-bold pointer-events-none select-none">
         日本
       </div>
 
@@ -42,7 +51,7 @@ export default function Footer() {
       <div className="absolute top-6 left-6 w-12 h-12 border-l-2 border-t-2 border-foreground/20" />
       <div className="absolute top-6 right-6 w-12 h-12 border-r-2 border-t-2 border-foreground/20" />
 
-      <div className="relative py-16 px-6 md:px-12 lg:px-20">
+      <div className="relative z-10 py-16 px-6 md:px-12 lg:px-20">
         <div className="max-w-7xl mx-auto">
           {/* Top Section - Newsletter CTA */}
           {/* <div className="mb-16 pb-12 border-b border-white/10">
@@ -80,7 +89,7 @@ export default function Footer() {
                   className="object-contain"
                 />
               </div>
-              <h3 className="text-3xl font-semibold mb-3 ">Woxsen Japan Centre</h3>
+              {/* <h3 className="text-3xl font-semibold mb-3 ">Woxsen Japan Centre</h3> */}
               <p className="text-white/60 text-medium leading-relaxed mb-6">
                 The Woxsen Japan Centre
                 facilitates academic collaboration, language education, and

@@ -33,6 +33,16 @@ export default function PageHeader({ title, subtitle, watermark = "日本" }: Pa
         />
       </div>
 
+      {/* Liquid Glass - High Specular Shine */}
+      <div className="absolute inset-0 z-1 pointer-events-none overflow-hidden">
+        {/* 1. Curved Surface Reflection */}
+        <div className="absolute -inset-x-[30%] top-0 h-[80%] bg-linear-to-b from-white/20 via-white/5 to-transparent rounded-b-[100%] mix-blend-overlay" />
+
+
+
+
+      </div>
+
       {/* Japanese Watermark */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none select-none z-0">
         <span
@@ -57,7 +67,7 @@ export default function PageHeader({ title, subtitle, watermark = "日本" }: Pa
       <div className="relative z-10 text-center px-6 py-20">
         {/* Subtitle Above */}
         <p
-          className={`text-white/70 text-sm md:text-base tracking-widest uppercase font-semibold mb-4 transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
+          className={`text-white/70 text-sm text-center md:text-base tracking-widest uppercase font-semibold mb-4 transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
             }`}
         >
           {subtitle}

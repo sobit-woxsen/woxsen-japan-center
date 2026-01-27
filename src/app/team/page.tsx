@@ -8,28 +8,28 @@ import { useEffect, useRef, useState } from "react"
 
 const faculty = [
   {
-    name: "Dr. Brundaban Mishra",
-    role: "Director",
-    subtitle: "Woxsen University",
-    image: "/images/team/faculty-leadership/dr-brundaban-mishra.jpg"
-  },
-  {
-    name: "Mr. Tanji Daisuke",
-    role: "Deputy Director",
-    subtitle: "Indobox Inc.",
-    image: "/images/team/faculty-leadership/mr-daisuke-tanji.jpg"
-  },
-  {
     name: "Dr. Raul Rodriguez",
     role: "Chairperson",
     subtitle: "Woxsen University",
     image: "/images/team/faculty-leadership/dr-raul-v-rodriguez.webp"
   },
   {
+    name: "Dr. Brundaban Mishra",
+    role: "Director",
+    subtitle: "Woxsen University",
+    image: "/images/team/faculty-leadership/dr-brundaban-mishra.jpg"
+  },
+  {
     name: "Ms. Priyanka Banik",
     role: "Vice-Chairperson",
     subtitle: "Woxsen University",
     image: "/images/team/faculty-leadership/ms-priyanka-baynik.jpeg"
+  },
+  {
+    name: "Mr. Tanji Daisuke",
+    role: "Deputy Director",
+    subtitle: "Indobox Inc.",
+    image: "/images/team/faculty-leadership/mr-daisuke-tanji.jpg"
   },
   {
     name: "Ms. Nistha Jain",

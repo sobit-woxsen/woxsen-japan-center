@@ -39,9 +39,9 @@ const highlights = [
 ]
 
 const teamPreview = [
+  { name: "Dr. Raul Rodriguez", role: "Chairperson", image: "/images/team/faculty-leadership/dr-raul-v-rodriguez.webp" },
   { name: "Dr. Brundaban Mishra", role: "Director", image: "/images/team/faculty-leadership/dr-brundaban-mishra.jpg" },
   { name: "Mr. Tanji Daisuke", role: "Deputy Director", image: "/images/team/faculty-leadership/mr-daisuke-tanji.jpg" },
-  { name: "Dr. Raul Rodriguez", role: "Chairperson", image: "/images/team/faculty-leadership/dr-raul-v-rodriguez.webp" },
 ]
 
 export default function AboutPage() {
@@ -53,16 +53,12 @@ export default function AboutPage() {
       <section className="w-full py-20 px-6 md:px-12 lg:px-20 bg-background texture-overlay">
         <div className="max-w-5xl mx-auto text-center">
           <p className="text-foreground/80 text-lg md:text-xl leading-relaxed mb-12 max-w-3xl mx-auto">
-            The Woxsen Japan Centre is an institutional platform
-            at Woxsen University dedicated to advancing academic, cultural, and
-            industry engagement with Japan. The Centre supports Japanese
-            language education, cultural initiatives, academic collaboration, and
-            international partnerships, creating opportunities for students and
-            faculty to engage with Japan’s traditions, values, and contemporary
-            practices. Through interdisciplinary participation and experiential
-            learning, the Centre aims to foster global awareness, cross-cultural
-            understanding, and meaningful international exposure within the
-            university community.
+            The Centre supports Japanese language education, cultural initiatives, academic 
+collaboration, and international partnerships, creating opportunities for students 
+and faculty to engage with Japan’s traditions, values, and contemporary practices. 
+Through interdisciplinary participation and experiential learning, the Centre aims 
+to foster global awareness, cross-cultural understanding, and meaningful 
+international exposure within the university community
           </p>
 
           {/* Mini Stats */}

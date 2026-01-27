@@ -4,11 +4,11 @@
 @custom-variant dark (&:is(.dark *));
 
 @font-face {
-  font-family: 'Aspekta Variable';
+  font-family: "Aspekta Variable";
   font-weight: 100 900;
   font-display: swap;
   font-style: normal;
-  src: url('/fonts/aspekta/variable/AspektaVF.woff2') format('woff2');
+  src: url("/fonts/aspekta/variable/AspektaVF.woff2") format("woff2");
 }
 
 :root {
@@ -38,18 +38,18 @@
   --muted-foreground: oklch(0.45 0 0);
 
   /* Deep Red Accent - for emphasis only */
-  --accent: oklch(0.50 0.20 25);
+  --accent: oklch(0.5 0.2 25);
   /* #B22222 approx - deep crimson red */
   --accent-foreground: oklch(0.985 0 0);
 
-  --destructive: oklch(0.50 0.20 25);
+  --destructive: oklch(0.5 0.2 25);
   --destructive-foreground: oklch(0.985 0 0);
 
   /* Darker borders for charcoal theme */
   --border: oklch(0.85 0 0);
-  --input: oklch(0.90 0 0);
+  --input: oklch(0.9 0 0);
   --ring: oklch(0.18 0.01 260);
-  --chart-1: oklch(0.50 0.20 25);
+  --chart-1: oklch(0.5 0.2 25);
   --chart-2: oklch(0.35 0.01 260);
   --chart-3: oklch(0.45 0 0);
   --chart-4: oklch(0.55 0.05 260);
@@ -57,12 +57,12 @@
   --radius: 0.625rem;
   --sidebar: oklch(0.15 0.01 260);
   --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.50 0.20 25);
+  --sidebar-primary: oklch(0.5 0.2 25);
   --sidebar-primary-foreground: oklch(0.985 0 0);
   --sidebar-accent: oklch(0.22 0.01 260);
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(0.25 0.01 260);
-  --sidebar-ring: oklch(0.50 0.20 25);
+  --sidebar-ring: oklch(0.5 0.2 25);
 
   /* Glassmorphism variables */
   --glass-bg: rgba(26, 26, 31, 0.6);
@@ -106,7 +106,9 @@
 }
 
 @theme inline {
-  --font-family-sans: 'Aspekta Variable', var(--font-sans-jp), ui-sans-serif, system-ui, sans-serif;
+  --font-family-sans:
+    "Aspekta Variable", var(--font-sans-jp), ui-sans-serif, system-ui,
+    sans-serif;
   --font-family-serif: var(--font-serif), "Playfair Display", Georgia, serif;
 
   --color-background: var(--background);
@@ -159,11 +161,13 @@
 
   body {
     @apply bg-background text-foreground;
-    font-family: 'Aspekta Variable', var(--font-sans-jp), ui-sans-serif, system-ui, sans-serif;
+    font-family:
+      "Aspekta Variable", var(--font-sans-jp), ui-sans-serif, system-ui,
+      sans-serif;
   }
 
   body.body-texture {
-    background-image: url('/abc-texture.avif');
+    background-image: url("/abc-texture.avif");
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
@@ -179,7 +183,7 @@
   }
 
   p {
-    @apply leading-relaxed text-justify;
+    @apply leading-relaxed;
   }
 
   button {
@@ -188,7 +192,8 @@
 
   /* Override font-serif to use Playfair Display */
   .font-serif {
-    font-family: var(--font-serif), "Playfair Display", Georgia, serif !important;
+    font-family:
+      var(--font-serif), "Playfair Display", Georgia, serif !important;
   }
 }
 
@@ -201,11 +206,13 @@
   }
 
   .japanese-pattern {
-    background-image: repeating-linear-gradient(45deg,
-        transparent,
-        transparent 35px,
-        rgba(196, 164, 90, 0.05) 35px,
-        rgba(196, 164, 90, 0.05) 70px);
+    background-image: repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 35px,
+      rgba(196, 164, 90, 0.05) 35px,
+      rgba(196, 164, 90, 0.05) 70px
+    );
   }
 
   .accent-line {
@@ -267,17 +274,24 @@
   }
 
   .matte-dark {
-    background: linear-gradient(145deg, rgba(26, 26, 31, 0.95), rgba(35, 35, 42, 0.9));
+    background: linear-gradient(
+      145deg,
+      rgba(26, 26, 31, 0.95),
+      rgba(35, 35, 42, 0.9)
+    );
   }
 
   .matte-charcoal {
-    background: linear-gradient(145deg, rgba(45, 45, 52, 0.95), rgba(55, 55, 62, 0.9));
+    background: linear-gradient(
+      145deg,
+      rgba(45, 45, 52, 0.95),
+      rgba(55, 55, 62, 0.9)
+    );
   }
 }
 
 /* Smoke/Mist Animation Keyframes */
 @keyframes smoke-drift-1 {
-
   0%,
   100% {
     transform: translateX(0) translateY(0) scale(1);
@@ -301,7 +315,6 @@
 }
 
 @keyframes smoke-drift-2 {
-
   0%,
   100% {
     transform: translateX(-5%) translateY(0) scale(1.1);
@@ -320,7 +333,6 @@
 }
 
 @keyframes smoke-drift-3 {
-
   0%,
   100% {
     transform: translateX(3%) scale(1);
@@ -437,5 +449,20 @@
 @layer utilities {
   .animate-fade-in {
     animation: fade-in 0.5s ease-out forwards;
+  }
+}
+
+/* Sharp Glass Sweep Animation */
+@keyframes glass-sweep {
+  0% { transform: translateX(-150%) skewX(-30deg); opacity: 0; }
+  20% { opacity: 0.5; }
+  50% { opacity: 0.8; }
+  80% { opacity: 0.5; }
+  100% { transform: translateX(150%) skewX(-30deg); opacity: 0; }
+}
+
+@layer utilities {
+  .animate-glass-sweep {
+    animation: glass-sweep 6s cubic-bezier(0.4, 0, 0.2, 1) infinite;
   }
 }

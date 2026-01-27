@@ -40,7 +40,7 @@ export default function EventsPage() {
 
       {/* Key Initiatives Section */}
       <section className="w-full py-24 px-6 md:px-12 lg:px-20 bg-background texture-overlay">
-        <p className="text-foreground/70 text-lg max-w-3xl mx-auto mb-16">
+        <p className="text-foreground/70 text-lg max-w-3xl mx-auto mb-16 text-center">
           The Woxsen Japan Centre enriches campus life through a range of academic, cultural, and collaborative initiatives that deepen understanding between India and Japan.
         </p>
         <div className="max-w-7xl mx-auto ">
@@ -77,7 +77,7 @@ export default function EventsPage() {
             <span className="text-foreground font-sans text-sm tracking-widest font-bold uppercase mb-4 block">
               PAST EVENTS AND HIGHLIGHTS
             </span>
-            <p className="text-foreground/70 text-lg max-w-2xl mx-auto">
+            <p className="text-foreground/70 text-lg max-w-2xl mx-auto text-center">
               A look back at the memorable events and activities hosted by Woxsen Japan Centre.
             </p>
           </div>
